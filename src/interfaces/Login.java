@@ -28,11 +28,21 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        Page_Title5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        Page_Title12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        Page_Title9 = new javax.swing.JLabel();
+        Page_Title6 = new javax.swing.JLabel();
+        Page_Title7 = new javax.swing.JLabel();
+        Page_Title8 = new javax.swing.JLabel();
+        white_transparent_panel_title4 = new javax.swing.JLabel();
+        Page_Title10 = new javax.swing.JLabel();
+        bacground_login = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(325, 550));
-        setLocationByPlatform(true);
+        setLocation(new java.awt.Point(450, 100));
         setMinimumSize(new java.awt.Dimension(325, 550));
         setPreferredSize(new java.awt.Dimension(325, 550));
         setResizable(false);
@@ -40,15 +50,97 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        Page_Title5.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title5.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title5.setForeground(java.awt.Color.white);
+        Page_Title5.setText("login");
+        jPanel1.add(Page_Title5);
+        Page_Title5.setBounds(230, 390, 50, 30);
+        jPanel1.add(jTextField1);
+        jTextField1.setBounds(170, 330, 150, 23);
+        jPanel1.add(jTextField2);
+        jTextField2.setBounds(170, 260, 150, 23);
+
+        Page_Title12.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title12.setForeground(java.awt.Color.white);
+        Page_Title12.setText("beta 2");
+        jPanel1.add(Page_Title12);
+        Page_Title12.setBounds(250, 50, 260, 21);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel1.setText("Add");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(-140, -540, 870, 1130);
+        jLabel1.setBounds(150, 390, 190, 30);
+
+        Page_Title9.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title9.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
+        Page_Title9.setForeground(java.awt.Color.white);
+        Page_Title9.setText("Login");
+        jPanel1.add(Page_Title9);
+        Page_Title9.setBounds(210, 160, 260, 30);
+
+        Page_Title6.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title6.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
+        Page_Title6.setForeground(java.awt.Color.white);
+        Page_Title6.setText("Lydia");
+        jPanel1.add(Page_Title6);
+        Page_Title6.setBounds(190, 10, 260, 60);
+
+        Page_Title7.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title7.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title7.setForeground(java.awt.Color.white);
+        Page_Title7.setText("Welcome to Lydia Travel Services");
+        jPanel1.add(Page_Title7);
+        Page_Title7.setBounds(110, 90, 280, 21);
+
+        Page_Title8.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title8.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title8.setForeground(java.awt.Color.white);
+        Page_Title8.setText("Username");
+        jPanel1.add(Page_Title8);
+        Page_Title8.setBounds(200, 230, 260, 21);
+
+        white_transparent_panel_title4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
+        white_transparent_panel_title4.setText("larasparet");
+        white_transparent_panel_title4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                white_transparent_panel_title4MouseClicked(evt);
+            }
+        });
+        jPanel1.add(white_transparent_panel_title4);
+        white_transparent_panel_title4.setBounds(300, 340, 50, 40);
+
+        Page_Title10.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title10.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title10.setForeground(java.awt.Color.white);
+        Page_Title10.setText("Password");
+        jPanel1.add(Page_Title10);
+        Page_Title10.setBounds(200, 300, 260, 21);
+
+        bacground_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jPanel1.add(bacground_login);
+        bacground_login.setBounds(-140, -540, 870, 1130);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(-80, 0, 420, 550);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void white_transparent_panel_title4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_white_transparent_panel_title4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_white_transparent_panel_title4MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        this.setVisible(false);
+        new Main().setVisible(true);
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -86,7 +178,18 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Page_Title10;
+    private javax.swing.JLabel Page_Title12;
+    private javax.swing.JLabel Page_Title5;
+    private javax.swing.JLabel Page_Title6;
+    private javax.swing.JLabel Page_Title7;
+    private javax.swing.JLabel Page_Title8;
+    private javax.swing.JLabel Page_Title9;
+    private javax.swing.JLabel bacground_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel white_transparent_panel_title4;
     // End of variables declaration//GEN-END:variables
 }

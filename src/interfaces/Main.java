@@ -107,24 +107,34 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jInternalFrame1 = new javax.swing.JInternalFrame();
         outerPanel = new java.awt.Panel();
         Home = new java.awt.Panel();
         Page_Title11 = new javax.swing.JLabel();
-        jText_Account3 = new javax.swing.JTextField();
-        jText_Account4 = new javax.swing.JTextField();
-        jText_Account5 = new javax.swing.JTextField();
         Page_Title12 = new javax.swing.JLabel();
         Page_Title13 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        s_icon9 = new javax.swing.JLabel();
         s_icon8 = new javax.swing.JLabel();
         Page_Title14 = new javax.swing.JLabel();
         Page_Title15 = new javax.swing.JLabel();
-        Page_Title16 = new javax.swing.JLabel();
+        white_transparent_panel_title6 = new javax.swing.JLabel();
         white_transparent_panel_title5 = new javax.swing.JLabel();
+        white_transparent_panel_title8 = new javax.swing.JLabel();
+        Page_Title22 = new javax.swing.JLabel();
+        Page_Title23 = new javax.swing.JLabel();
+        Page_Title24 = new javax.swing.JLabel();
+        Page_Title25 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        Page_Title20 = new javax.swing.JLabel();
+        Page_Title16 = new javax.swing.JLabel();
+        Page_Title21 = new javax.swing.JLabel();
         Page_Title17 = new javax.swing.JLabel();
         background_img4 = new javax.swing.JLabel();
         Page_Title18 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        Page_Title19 = new javax.swing.JLabel();
+        white_transparent_panel_title7 = new javax.swing.JLabel();
         Account = new java.awt.Panel();
         Page_Title4 = new javax.swing.JLabel();
         jText_Account = new javax.swing.JTextField();
@@ -150,7 +160,10 @@ public class Main extends javax.swing.JFrame {
         img_black2 = new javax.swing.JLabel();
         Backgroud_iamge = new javax.swing.JLabel();
 
+        jInternalFrame1.setVisible(true);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(450, 100));
         setMinimumSize(new java.awt.Dimension(325, 550));
         setResizable(false);
         getContentPane().setLayout(null);
@@ -162,67 +175,32 @@ public class Main extends javax.swing.JFrame {
         Page_Title11.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title11.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title11.setForeground(java.awt.Color.white);
-        Page_Title11.setText("Cancel");
+        Page_Title11.setText("50");
         Home.add(Page_Title11);
-        Page_Title11.setBounds(190, 280, 60, 17);
-
-        jText_Account3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jText_Account3ActionPerformed(evt);
-            }
-        });
-        Home.add(jText_Account3);
-        jText_Account3.setBounds(140, 170, 140, 23);
-
-        jText_Account4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jText_Account4ActionPerformed(evt);
-            }
-        });
-        Home.add(jText_Account4);
-        jText_Account4.setBounds(140, 210, 140, 23);
-
-        jText_Account5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jText_Account5ActionPerformed(evt);
-            }
-        });
-        Home.add(jText_Account5);
-        jText_Account5.setBounds(140, 130, 140, 23);
+        Page_Title11.setBounds(200, 120, 60, 17);
 
         Page_Title12.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 1, 14)); // NOI18N
         Page_Title12.setForeground(java.awt.Color.white);
-        Page_Title12.setText("Add");
+        Page_Title12.setText("Account Infromation");
         Home.add(Page_Title12);
-        Page_Title12.setBounds(70, 280, 40, 17);
+        Page_Title12.setBounds(50, 220, 160, 17);
 
         Page_Title13.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title13.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title13.setForeground(java.awt.Color.white);
-        Page_Title13.setText("Name");
+        Page_Title13.setText("Account Balance");
         Home.add(Page_Title13);
-        Page_Title13.setBounds(30, 210, 100, 17);
+        Page_Title13.setBounds(50, 290, 130, 17);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel2.setText("Add");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        s_icon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small.png"))); // NOI18N
+        s_icon9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                s_icon9MouseClicked(evt);
             }
         });
-        Home.add(jLabel2);
-        jLabel2.setBounds(30, 270, 110, 40);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/callout-red-bg (2).png"))); // NOI18N
-        jLabel4.setText("Add");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
-            }
-        });
-        Home.add(jLabel4);
-        jLabel4.setBounds(160, 270, 120, 40);
+        Home.add(s_icon9);
+        s_icon9.setBounds(10, 110, 30, 40);
 
         s_icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small.png"))); // NOI18N
         s_icon8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -236,23 +214,26 @@ public class Main extends javax.swing.JFrame {
         Page_Title14.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title14.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title14.setForeground(java.awt.Color.white);
-        Page_Title14.setText("Mobile Number");
+        Page_Title14.setText("Traveled Times");
         Home.add(Page_Title14);
-        Page_Title14.setBounds(30, 170, 110, 17);
+        Page_Title14.setBounds(50, 120, 110, 17);
 
         Page_Title15.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title15.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title15.setForeground(java.awt.Color.white);
-        Page_Title15.setText("Account Number");
+        Page_Title15.setText("$100");
         Home.add(Page_Title15);
-        Page_Title15.setBounds(30, 130, 110, 17);
+        Page_Title15.setBounds(200, 160, 110, 17);
 
-        Page_Title16.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title16.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
-        Page_Title16.setForeground(java.awt.Color.white);
-        Page_Title16.setText("Home");
-        Home.add(Page_Title16);
-        Page_Title16.setBounds(60, 0, 140, 21);
+        white_transparent_panel_title6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
+        white_transparent_panel_title6.setText("larasparet");
+        white_transparent_panel_title6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                white_transparent_panel_title6MouseClicked(evt);
+            }
+        });
+        Home.add(white_transparent_panel_title6);
+        white_transparent_panel_title6.setBounds(-260, 0, 710, 20);
 
         white_transparent_panel_title5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
         white_transparent_panel_title5.setText("larasparet");
@@ -262,12 +243,93 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Home.add(white_transparent_panel_title5);
-        white_transparent_panel_title5.setBounds(-260, 0, 710, 20);
+        white_transparent_panel_title5.setBounds(-230, 220, 540, 20);
+
+        white_transparent_panel_title8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
+        white_transparent_panel_title8.setText("larasparet");
+        white_transparent_panel_title8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                white_transparent_panel_title8MouseClicked(evt);
+            }
+        });
+        Home.add(white_transparent_panel_title8);
+        white_transparent_panel_title8.setBounds(-230, 90, 540, 20);
+
+        Page_Title22.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title22.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title22.setForeground(java.awt.Color.white);
+        Page_Title22.setText("0771929434");
+        Page_Title22.setToolTipText("0771929434");
+        Home.add(Page_Title22);
+        Page_Title22.setBounds(180, 260, 130, 17);
+
+        Page_Title23.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title23.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title23.setForeground(java.awt.Color.white);
+        Page_Title23.setText("Account Balance");
+        Home.add(Page_Title23);
+        Page_Title23.setBounds(50, 320, 130, 17);
+
+        Page_Title24.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title24.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title24.setForeground(java.awt.Color.white);
+        Page_Title24.setText("Mobile No");
+        Page_Title24.setToolTipText("");
+        Home.add(Page_Title24);
+        Page_Title24.setBounds(50, 260, 130, 17);
+
+        Page_Title25.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title25.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title25.setForeground(java.awt.Color.white);
+        Page_Title25.setText("Account Balance");
+        Home.add(Page_Title25);
+        Page_Title25.setBounds(50, 350, 130, 17);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel2.setText("Add");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel2);
+        jLabel2.setBounds(10, 90, 30, 390);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel6.setText("Add");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel6);
+        jLabel6.setBounds(10, 90, 300, 390);
+
+        Page_Title20.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title20.setFont(new java.awt.Font("Ubuntu Light", 1, 14)); // NOI18N
+        Page_Title20.setForeground(java.awt.Color.white);
+        Page_Title20.setText("Dashbord");
+        Home.add(Page_Title20);
+        Page_Title20.setBounds(50, 90, 80, 17);
+
+        Page_Title16.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title16.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title16.setForeground(java.awt.Color.white);
+        Page_Title16.setText("Home");
+        Home.add(Page_Title16);
+        Page_Title16.setBounds(60, 0, 140, 21);
+
+        Page_Title21.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title21.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title21.setForeground(java.awt.Color.white);
+        Page_Title21.setText("Account Balance");
+        Home.add(Page_Title21);
+        Page_Title21.setBounds(50, 160, 130, 17);
 
         Page_Title17.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title17.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title17.setForeground(java.awt.Color.white);
-        Page_Title17.setText("Add Your Account here");
+        Page_Title17.setText("Hi , Username");
         Home.add(Page_Title17);
         Page_Title17.setBounds(20, 50, 220, 21);
 
@@ -282,6 +344,33 @@ public class Main extends javax.swing.JFrame {
         Page_Title18.setText("Add Your Account here....");
         Home.add(Page_Title18);
         Page_Title18.setBounds(10, 50, 220, 21);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel5.setText("Add");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel5);
+        jLabel5.setBounds(10, 90, 260, 280);
+
+        Page_Title19.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title19.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title19.setForeground(java.awt.Color.white);
+        Page_Title19.setText("Account Balance");
+        Home.add(Page_Title19);
+        Page_Title19.setBounds(50, 200, 110, 17);
+
+        white_transparent_panel_title7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
+        white_transparent_panel_title7.setText("larasparet");
+        white_transparent_panel_title7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                white_transparent_panel_title7MouseClicked(evt);
+            }
+        });
+        Home.add(white_transparent_panel_title7);
+        white_transparent_panel_title7.setBounds(-230, 90, 540, 20);
 
         outerPanel.add(Home, "card4");
 
@@ -538,25 +627,9 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jText_AccountActionPerformed
 
-    private void jText_Account3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_Account3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jText_Account3ActionPerformed
-
-    private void jText_Account4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_Account4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jText_Account4ActionPerformed
-
-    private void jText_Account5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_Account5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jText_Account5ActionPerformed
-
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel4MouseClicked
 
     private void s_icon8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon8MouseClicked
         // TODO add your handling code here:
@@ -577,6 +650,30 @@ public class Main extends javax.swing.JFrame {
         outerPanel.revalidate();
         
     }//GEN-LAST:event_Page_Title4MouseClicked
+
+    private void s_icon9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_s_icon9MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void white_transparent_panel_title6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_white_transparent_panel_title6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_white_transparent_panel_title6MouseClicked
+
+    private void white_transparent_panel_title7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_white_transparent_panel_title7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_white_transparent_panel_title7MouseClicked
+
+    private void white_transparent_panel_title8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_white_transparent_panel_title8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_white_transparent_panel_title8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -626,6 +723,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title16;
     private javax.swing.JLabel Page_Title17;
     private javax.swing.JLabel Page_Title18;
+    private javax.swing.JLabel Page_Title19;
+    private javax.swing.JLabel Page_Title20;
+    private javax.swing.JLabel Page_Title21;
+    private javax.swing.JLabel Page_Title22;
+    private javax.swing.JLabel Page_Title23;
+    private javax.swing.JLabel Page_Title24;
+    private javax.swing.JLabel Page_Title25;
     private javax.swing.JLabel Page_Title3;
     private javax.swing.JLabel Page_Title4;
     private javax.swing.JLabel Page_Title5;
@@ -636,16 +740,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel background_img3;
     private javax.swing.JLabel background_img4;
     private javax.swing.JLabel img_black2;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jText_Account;
     private javax.swing.JTextField jText_Account1;
     private javax.swing.JTextField jText_Account2;
-    private javax.swing.JTextField jText_Account3;
-    private javax.swing.JTextField jText_Account4;
-    private javax.swing.JTextField jText_Account5;
     private javax.swing.JLabel main_title;
     private java.awt.Panel outerPanel;
     private javax.swing.JLabel s_icon1;
@@ -653,8 +756,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel s_icon3;
     private javax.swing.JLabel s_icon7;
     private javax.swing.JLabel s_icon8;
+    private javax.swing.JLabel s_icon9;
     private javax.swing.JLabel sideBlack1;
     private javax.swing.JLabel white_transparent_panel_title4;
     private javax.swing.JLabel white_transparent_panel_title5;
+    private javax.swing.JLabel white_transparent_panel_title6;
+    private javax.swing.JLabel white_transparent_panel_title7;
+    private javax.swing.JLabel white_transparent_panel_title8;
     // End of variables declaration//GEN-END:variables
 }
