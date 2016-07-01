@@ -297,7 +297,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Account.add(Page_Title4);
-        Page_Title4.setBounds(190, 280, 60, 17);
+        Page_Title4.setBounds(200, 280, 60, 17);
 
         jText_Account.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
