@@ -108,6 +108,8 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
         outerPanel = new java.awt.Panel();
         Home = new java.awt.Panel();
         Page_Title11 = new javax.swing.JLabel();
@@ -164,6 +166,13 @@ public class Main extends javax.swing.JFrame {
         Backgroud_iamge = new javax.swing.JLabel();
 
         jInternalFrame1.setVisible(true);
+
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(450, 100));
@@ -770,6 +779,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JList jList1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jText_Account;
     private javax.swing.JTextField jText_Account1;
     private javax.swing.JTextField jText_Account2;
