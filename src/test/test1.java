@@ -2,7 +2,7 @@ package test;
 
 
 import controllers.AccountControl;
-import entities.MobileAccount;
+import entities.*;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -21,93 +21,34 @@ import java.util.Vector;
  * @author Anuradha
  */
 public class test1 {
-    //private static AccountControl AC=new AccountControl();
-    public static Vector<MobileAccount> mobileAccounts=new Vector<MobileAccount>();
+
     
-    public static void main(String args[]) throws IOException, ClassNotFoundException, ParseException{
+    public static void main(String args[]) throws IOException, ParseException, ClassNotFoundException{
         
         String dateStr = "06/27/2007";
         DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-        Date startDate = (Date)formatter.parse(dateStr); 
+        Date startDate = formatter.parse(dateStr); 
         
-        MobileAccount acc=new MobileAccount("M123456",100,startDate,startDate,"one day pass",546,456,786,45);
+        //MobileAccount acc=new MobileAccount("M123456",100,startDate,startDate,"one day pass",2,4,5,66);
         //Account ac=new Account("456789");
         //AC.createTempAccount(acc);
         //AC.add(ac);
-        AccountControl.createMobileAccount(acc);
-        AccountControl.serialize();
-        mobileAccounts=AccountControl.deserialize();
-        //Serialization.serialize(MC, "acc.ser");
+        //AccountControl.createMobileAccount(acc);
+        //AccountControl.serialize();
+        AccountControl.deserialize();
+  
         
-        //MC= (Vector<MobileAccount>) Serialization.deserialize("acc.ser");
-        //MobileAccount objs = AC.get(0).getAcNum();
-        //System.out.print(acc.getAcNum());
-        //System.out.print(acc.getNum());
+        MobileAccount temp=AccountControl.findMobileAccountByAccountNumber("M123456");
         
-         //System.out.print(AC.get(0).getNum() + " ");
-         String cr;
-         int sub;
-        for (MobileAccount item:mobileAccounts) {
-            
-            cr=item.getAccountNumber();
-             System.out.print(cr);
-             sub=item.getSubscriberId();
-             System.out.print(sub);
-         }
+        int cnum=temp.getCreditCardNumber();
+        System.out.println(cnum);
             
          
         
         
         
-        
-        
-  /*
-     try {
-   FileOutputStream fileOutputStream = new FileOutputStream(
-     "serialObject.ser");
-   ObjectOutputStream objectOutputStream = new ObjectOutputStream(
-     fileOutputStream);
-   objectOutputStream.writeObject(acc);
-
-  } catch (FileNotFoundException e) {
-   // TODO Auto-generated catch block
-   e.printStackTrace();
-  } catch (IOException ioe) {
-   // TODO Auto-generated catch block
-   ioe.printStackTrace();
-  }
-
-  /*
-   * Deserializing instance
-   */
-        /*
-  MobileAccount Acc = null;
-
-  try {
-   FileInputStream fileInputStream = new FileInputStream(
-     "serialobject.ser");
-   ObjectInputStream inputStream = new ObjectInputStream(
-     fileInputStream);
-   Acc = (MobileAccount) inputStream.readObject();
-
-  } catch (FileNotFoundException e) {
-   // TODO Auto-generated catch block
-   e.printStackTrace();
-  } catch (IOException ioe) {
-   // TODO Auto-generated catch block
-   ioe.printStackTrace();
-  } catch (ClassNotFoundException cnf) {
-   // TODO Auto-generated catch block
-   cnf.printStackTrace();
-  }
-
-  /*
-   * Printing values from deserialized object
-   */
-  //System.out.println("Printing value of Deserailized instance :");
- // System.out.println("Gender: " + Acc.getNum());
- 
-
- }
     }
+
+ 
+ }
 
