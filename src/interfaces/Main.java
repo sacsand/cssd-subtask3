@@ -145,6 +145,9 @@ public class Main extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         s_icon7 = new javax.swing.JLabel();
+        paypal = new javax.swing.JRadioButton();
+        paypal1 = new javax.swing.JRadioButton();
+        paypal2 = new javax.swing.JRadioButton();
         Page_Title9 = new javax.swing.JLabel();
         Page_Title7 = new javax.swing.JLabel();
         Page_Title3 = new javax.swing.JLabel();
@@ -386,7 +389,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Account.add(Page_Title4);
-        Page_Title4.setBounds(200, 280, 60, 17);
+        Page_Title4.setBounds(200, 350, 60, 17);
 
         jText_Account.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -394,7 +397,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Account.add(jText_Account);
-        jText_Account.setBounds(140, 170, 140, 23);
+        jText_Account.setBounds(140, 230, 140, 23);
 
         jText_Account1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -402,7 +405,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Account.add(jText_Account1);
-        jText_Account1.setBounds(140, 210, 140, 23);
+        jText_Account1.setBounds(140, 280, 140, 23);
 
         jText_Account2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -410,21 +413,21 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Account.add(jText_Account2);
-        jText_Account2.setBounds(140, 130, 140, 23);
+        jText_Account2.setBounds(140, 180, 140, 23);
 
         Page_Title8.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title8.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title8.setForeground(java.awt.Color.white);
-        Page_Title8.setText("Add");
+        Page_Title8.setText("Top Up");
         Account.add(Page_Title8);
-        Page_Title8.setBounds(70, 280, 40, 17);
+        Page_Title8.setBounds(50, 350, 60, 17);
 
         Page_Title10.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title10.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title10.setForeground(java.awt.Color.white);
-        Page_Title10.setText("Name");
+        Page_Title10.setText("Amount");
         Account.add(Page_Title10);
-        Page_Title10.setBounds(30, 210, 100, 17);
+        Page_Title10.setBounds(30, 280, 100, 17);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel1.setText("Add");
@@ -434,7 +437,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Account.add(jLabel1);
-        jLabel1.setBounds(30, 270, 110, 40);
+        jLabel1.setBounds(30, 340, 110, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/callout-red-bg (2).png"))); // NOI18N
         jLabel3.setText("Add");
@@ -444,7 +447,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Account.add(jLabel3);
-        jLabel3.setBounds(160, 270, 120, 40);
+        jLabel3.setBounds(160, 340, 120, 40);
 
         s_icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small.png"))); // NOI18N
         s_icon7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -455,24 +458,41 @@ public class Main extends javax.swing.JFrame {
         Account.add(s_icon7);
         s_icon7.setBounds(20, 0, 30, 40);
 
+        paypal.setText("MasterCard");
+        paypal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paypalActionPerformed(evt);
+            }
+        });
+        Account.add(paypal);
+        paypal.setBounds(110, 120, 115, 28);
+
+        paypal1.setText("Visa");
+        Account.add(paypal1);
+        paypal1.setBounds(230, 120, 80, 28);
+
+        paypal2.setText("PayPal");
+        Account.add(paypal2);
+        paypal2.setBounds(20, 120, 80, 28);
+
         Page_Title9.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title9.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title9.setForeground(java.awt.Color.white);
-        Page_Title9.setText("Mobile Number");
+        Page_Title9.setText("PIN");
         Account.add(Page_Title9);
-        Page_Title9.setBounds(30, 170, 110, 17);
+        Page_Title9.setBounds(30, 230, 110, 17);
 
         Page_Title7.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title7.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title7.setForeground(java.awt.Color.white);
-        Page_Title7.setText("Account Number");
+        Page_Title7.setText("Card No");
         Account.add(Page_Title7);
-        Page_Title7.setBounds(30, 130, 110, 17);
+        Page_Title7.setBounds(30, 180, 110, 17);
 
         Page_Title3.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title3.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title3.setForeground(java.awt.Color.white);
-        Page_Title3.setText("Account");
+        Page_Title3.setText("Top Up");
         Account.add(Page_Title3);
         Page_Title3.setBounds(60, 0, 140, 21);
 
@@ -489,7 +509,7 @@ public class Main extends javax.swing.JFrame {
         Page_Title5.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title5.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title5.setForeground(java.awt.Color.white);
-        Page_Title5.setText("Add Your Account here");
+        Page_Title5.setText("Top Up Your Account here");
         Account.add(Page_Title5);
         Page_Title5.setBounds(20, 50, 220, 21);
 
@@ -675,6 +695,10 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_white_transparent_panel_title8MouseClicked
 
+    private void paypalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paypalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_paypalActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -751,6 +775,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField jText_Account2;
     private javax.swing.JLabel main_title;
     private java.awt.Panel outerPanel;
+    private javax.swing.JRadioButton paypal;
+    private javax.swing.JRadioButton paypal1;
+    private javax.swing.JRadioButton paypal2;
     private javax.swing.JLabel s_icon1;
     private javax.swing.JLabel s_icon2;
     private javax.swing.JLabel s_icon3;
