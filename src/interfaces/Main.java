@@ -332,7 +332,7 @@ public class Main extends javax.swing.JFrame {
         Page_Title17.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title17.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title17.setForeground(java.awt.Color.white);
-        Page_Title17.setText("Hi , Username");
+        Page_Title17.setText("Hi , username");
         Home.add(Page_Title17);
         Page_Title17.setBounds(20, 50, 220, 21);
 

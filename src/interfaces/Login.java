@@ -140,7 +140,7 @@ public class Login extends javax.swing.JFrame {
         Page_Title9.setForeground(java.awt.Color.white);
         Page_Title9.setText("Login");
         jPanel3.add(Page_Title9);
-        Page_Title9.setBounds(210, 160, 260, 30);
+        Page_Title9.setBounds(210, 160, 70, 30);
 
         Page_Title6.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title6.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
