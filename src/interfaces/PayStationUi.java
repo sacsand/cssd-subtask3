@@ -492,9 +492,9 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title25.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title25.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title25.setForeground(java.awt.Color.white);
-        Page_Title25.setText("Dont Froget Collect your card");
+        Page_Title25.setText("Don't Forget to Collect your card");
         card_paid.add(Page_Title25);
-        Page_Title25.setBounds(140, 190, 330, 30);
+        Page_Title25.setBounds(130, 190, 370, 30);
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
         card_paid.add(jLabel21);
