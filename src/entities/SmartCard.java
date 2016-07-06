@@ -21,6 +21,9 @@ public class SmartCard extends TravelCard implements Serializable{
         this.authentication= authentication;
     }
 
+    public String authenticate(){
+        return "MD5 KEY";
+    }
     public boolean isAuthentication() {
         return authentication;
     }
@@ -29,8 +32,12 @@ public class SmartCard extends TravelCard implements Serializable{
         this.authentication = authentication;
     }
     
-    public String validate(String MD5key){
-        return null;
+    public boolean validate(String MD5key){
+        if(MD5key.equals("MD5 KEY"))
+        {
+        return true;
+        }
+        return false;
     }
     public String encrypt(String data){
         return null;

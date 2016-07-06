@@ -13,12 +13,17 @@ import java.sql.Time;
  */
 public class CardReaderLog extends Log{
 
-    public CardReaderLog(Time timecreated, String route, String accountNumber, String checkInLocation, Time checkInTime, String checkOutLocation, Time checkOutTime, float fareCharged) {
+    public CardReaderLog(String timecreated, String route, String accountNumber, String checkInLocation, String checkInTime, String checkOutLocation, String checkOutTime, float fareCharged) {
         super(timecreated, route, accountNumber, checkInLocation, checkInTime, checkOutLocation, checkOutTime, fareCharged);
     }
+    public CardReaderLog(String timecreated, String route, String accountNumber, String checkInLocation, String checkInTime) {
+        super(timecreated, route, accountNumber, checkInLocation, checkInTime);
+    }
     
-    public void updateLog(String destination,Time time){
-        
+    public void updateLog(String destination,String time,float fare){
+        this.setCheckOutLocation(destination);
+        this.setCheckOutTime(time);
+        this.setFareCharged(fare);
     }
     
 }

@@ -14,7 +14,7 @@ import java.sql.Time;
  */
 public class Log implements Serializable{
 
-    public Log(Time timecreated, String route, String accountNumber, String checkInLocation, Time checkInTime, String checkOutLocation, Time checkOutTime, float fareCharged) {
+    public Log(String timecreated, String route, String accountNumber, String checkInLocation, String checkInTime, String checkOutLocation, String checkOutTime, float fareCharged) {
         this.timecreated = timecreated;
         this.route = route;
         this.accountNumber = accountNumber;
@@ -24,17 +24,24 @@ public class Log implements Serializable{
         this.checkOutTime = checkOutTime;
         this.fareCharged = fareCharged;
     }
+    public Log(String timecreated, String route, String accountNumber, String checkInLocation, String checkInTime) {
+        this.timecreated = timecreated;
+        this.route = route;
+        this.accountNumber = accountNumber;
+        this.checkInLocation = checkInLocation;
+        this.checkInTime = checkInTime;
+    }
     
-    private Time timecreated; 
+    private String timecreated; 
     private String route;
     private String accountNumber;
     private String checkInLocation;
-    private Time checkInTime;
+    private String checkInTime;
     private String checkOutLocation;
-    private Time checkOutTime;
+    private String checkOutTime;
     private float fareCharged;
 
-    public Time getTimecreated() {
+    public String getTimecreated() {
         return timecreated;
     }
 
@@ -50,7 +57,7 @@ public class Log implements Serializable{
         return checkInLocation;
     }
 
-    public Time getCheckInTime() {
+    public String getCheckInTime() {
         return checkInTime;
     }
 
@@ -58,7 +65,7 @@ public class Log implements Serializable{
         return checkOutLocation;
     }
 
-    public Time getCheckOutTime() {
+    public String getCheckOutTime() {
         return checkOutTime;
     }
 
@@ -66,7 +73,7 @@ public class Log implements Serializable{
         return fareCharged;
     }
 
-    public void setTimecreated(Time timecreated) {
+    public void setTimecreated(String timecreated) {
         this.timecreated = timecreated;
     }
 
@@ -82,7 +89,7 @@ public class Log implements Serializable{
         this.checkInLocation = checkInLocation;
     }
 
-    public void setCheckInTime(Time checkInTime) {
+    public void setCheckInTime(String checkInTime) {
         this.checkInTime = checkInTime;
     }
 
@@ -90,7 +97,7 @@ public class Log implements Serializable{
         this.checkOutLocation = checkOutLocation;
     }
 
-    public void setCheckOutTime(Time checkOutTime) {
+    public void setCheckOutTime(String checkOutTime) {
         this.checkOutTime = checkOutTime;
     }
 

@@ -14,7 +14,22 @@ import java.util.Vector;
  * @author Anuradha
  */
 public class AccountControl implements Serializable {
-   
+    
+    private volatile static AccountControl uniqueInstance;
+    public static synchronized AccountControl getInstance()
+  {
+      if(uniqueInstance==null)
+      {
+          synchronized(AccountControl.class)
+          {
+              if(uniqueInstance==null)
+                uniqueInstance=new AccountControl();
+          }
+      }
+      return uniqueInstance;
+  }
+   private AccountControl(){
+   }
     private static Vector<MobileAccount> setOfMobileAccounts=new Vector<MobileAccount>(); 
     private static Vector<TempAccount> setOfTempAccounts=new Vector<TempAccount>();
     private static Vector<SmartAccount> setOfSmartAccounts=new Vector<SmartAccount>();
@@ -32,65 +47,41 @@ public class AccountControl implements Serializable {
      
      
      public static MobileAccount findMobileAccountByAccountNumber(String AccNo){
-         
-         MobileAccount mAcc=null;
-         
-        // for(int i=0;i<setOfMobileAccounts.size();i++)
-          //  {
+           MobileAccount op=null; 
                for(MobileAccount MA: setOfMobileAccounts )
                {
-                   
-                   
                 if((MA.getAccountNumber()).equals(AccNo))
                 {
                     return MA;
                 }else
                 {
-                    mAcc= null;
+                    op =null;
                 }
-                   
                }
-           // }
-            
-         return mAcc;
+            return op;
      }
      /**
-      * @author ravi
-      * @param mobile 
-      * @return mobile account object 
-      * find a mobile account by mobile number
-      */
-     
-     public static MobileAccount findMobileAccountByMobileNumber(int mobileNumber){
-         
-         MobileAccount mAcc=null;
-           // for(int i=0;i<setOfMobileAccounts.size();i++)
-          //  {
-                
-              
-                for(MobileAccount MA: setOfMobileAccounts )
-                {
-                    
-                    if((MA.getSubscriberId()== mobileNumber))
-                    {
-                        
-                        return MA;
-                          
-                    }else
-                    {
-                        mAcc = null;
-                    }
-                }
-                
-                
-           // }
-            return mAcc;
-     }
-     
-     
+     * @author ravi
+     * @param mobile
+     * @return mobile account object find a mobile account by mobile number
+     */
+    public static MobileAccount findMobileAccountByMobileNumber(int mobileNumber) {
+
+        MobileAccount mAcc = null;
+        for (MobileAccount MA : setOfMobileAccounts) {
+
+            if ((MA.getSubscriberId() == mobileNumber)) {
+
+                return MA;
+
+            } else {
+                mAcc = null;
+            }
+        }
+        return mAcc;
+    }
      public static SmartAccount findSmartAccountByAccountNumber(String AccNo){
-            for(int i=0;i<setOfSmartAccounts.size();i++)
-            {
+            
                for(SmartAccount SA: setOfSmartAccounts )
                 if((SA.getAccountNumber()).equals(AccNo))
                 {
@@ -99,12 +90,10 @@ public class AccountControl implements Serializable {
                 {
                     return null;
                 }
-            }
             return null;
      }
       public static TempAccount findTemptAccountByAccountNumber(String AccNo){
-            for(int i=0;i<setOfTempAccounts.size();i++)
-            {
+            
                for(TempAccount TA: setOfTempAccounts )
                 if((TA.getAccountNumber()).equals(AccNo))
                 {
@@ -113,21 +102,17 @@ public class AccountControl implements Serializable {
                 {
                     return null;
                 }
-            }
             return null;
      }
-      
     public static void serialize() throws IOException{
       Serialization.serialize(setOfMobileAccounts, "mobileAccounts.ser");
       Serialization.serialize(setOfTempAccounts, "tempAccounts.ser");
       Serialization.serialize(setOfSmartAccounts, "smartAccounts.ser");
-       
     }
     public static void deserialize() throws IOException, ClassNotFoundException{
        setOfMobileAccounts=(Vector<MobileAccount>) Serialization.deserialize("mobileAccounts.ser");
-       
-       //setOfTempAccounts=(Vector<TempAccount>) Serialization.deserialize("tempAccounts.ser");
-       //setOfSmartAccounts=(Vector<SmartAccount>) Serialization.deserialize("smartAccounts.ser");
+       setOfTempAccounts=(Vector<TempAccount>) Serialization.deserialize("tempAccounts.ser");
+       setOfSmartAccounts=(Vector<SmartAccount>) Serialization.deserialize("smartAccounts.ser");
     }
  
 }

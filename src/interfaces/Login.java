@@ -893,7 +893,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jLabel_packageNextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_packageNextMouseClicked
 
-        tempMobileAccount = AccountControl.findMobileAccountByAccountNumber(accountNumber); //setting the current user object
+        tempMobileAccount = AccountControl.getInstance().findMobileAccountByAccountNumber(accountNumber); //setting the current user object
         tempMobileAccount.setPackageType((String) jComboBox_packageType.getSelectedItem()); //set the selected package to the user
         // removing pane
         main_panel.removeAll();

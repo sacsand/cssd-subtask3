@@ -16,7 +16,7 @@ public class TempLog extends Log implements Serializable{
     
     private int hops;
 
-    public TempLog(Time timecreated, String route, String accountNumber, String checkInLocation, Time checkInTime, String checkOutLocation, Time checkOutTime, float fareCharged) {
+    public TempLog(String timecreated, String route, String accountNumber, String checkInLocation, String checkInTime, String checkOutLocation, String checkOutTime, float fareCharged) {
         super(timecreated, route, accountNumber, checkInLocation, checkInTime, checkOutLocation, checkOutTime, fareCharged);
         
         this.hops=hops;
