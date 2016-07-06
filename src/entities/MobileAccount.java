@@ -17,8 +17,15 @@ public class MobileAccount extends Account implements Serializable{
     private int creditCardNumber;
     private int debitCardNumber;
     private int subscriberId;
+    
 
-    public MobileAccount(String accountNumber, float amount, Date createdDate, Date expireDate, String packageType,int payPalAccount, int creditCardNumber,int debitCardNumber,int subscriberId) {
+    public MobileAccount(int subscriberId,Date createdDate) {
+        super(createdDate);
+        this.subscriberId = subscriberId;
+    }
+
+    
+    public MobileAccount(String accountNumber, double amount, Date createdDate, Date expireDate, String packageType,int payPalAccount, int creditCardNumber,int debitCardNumber,int subscriberId) {
         super(accountNumber, amount, createdDate, expireDate, packageType);
         
         this.payPalAccount=payPalAccount;
@@ -60,7 +67,7 @@ public class MobileAccount extends Account implements Serializable{
         this.subscriberId = subscriberId;
     }
     
-   public void topUp(float amount) {
+   public void topUp(double amount) {
         super.setAmount(super.getAmount() + amount);
 
     }
@@ -70,7 +77,7 @@ public class MobileAccount extends Account implements Serializable{
 
     }
 
-    public void deductAmount(float amount) {
+    public void deductAmount(double amount) {
         super.setAmount(super.getAmount() - amount);
 
     }

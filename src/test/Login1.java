@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package temp;
+package test;
 
+import interfaces.*;
+import temp.*;
 import interfaces.*;
 
 /**
@@ -54,7 +56,6 @@ public class Login1 extends javax.swing.JFrame {
         Page_Title17 = new javax.swing.JLabel();
         white_transparent_panel_title5 = new javax.swing.JLabel();
         Page_Title18 = new javax.swing.JLabel();
-        Page_Title39 = new javax.swing.JLabel();
         bacground_login1 = new javax.swing.JLabel();
         ipayment_type = new javax.swing.JPanel();
         Page_Title20 = new javax.swing.JLabel();
@@ -101,8 +102,7 @@ public class Login1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(450, 100));
-        setMinimumSize(new java.awt.Dimension(325, 400));
-        setPreferredSize(new java.awt.Dimension(325, 500));
+        setMinimumSize(new java.awt.Dimension(325, 550));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -141,7 +141,7 @@ public class Login1 extends javax.swing.JFrame {
         Page_Title9.setForeground(java.awt.Color.white);
         Page_Title9.setText("Login");
         jPanel3.add(Page_Title9);
-        Page_Title9.setBounds(210, 160, 260, 30);
+        Page_Title9.setBounds(210, 160, 70, 30);
 
         Page_Title6.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title6.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -204,7 +204,7 @@ public class Login1 extends javax.swing.JFrame {
             }
         });
         iregister.add(Page_Title11);
-        Page_Title11.setBounds(200, 380, 80, 30);
+        Page_Title11.setBounds(200, 370, 70, 30);
         iregister.add(jTextField3);
         jTextField3.setBounds(160, 310, 150, 23);
 
@@ -223,7 +223,7 @@ public class Login1 extends javax.swing.JFrame {
             }
         });
         iregister.add(jLabel2);
-        jLabel2.setBounds(140, 380, 190, 30);
+        jLabel2.setBounds(140, 370, 190, 30);
         iregister.add(jTextField4);
         jTextField4.setBounds(160, 240, 150, 23);
 
@@ -251,9 +251,9 @@ public class Login1 extends javax.swing.JFrame {
         Page_Title17.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title17.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title17.setForeground(java.awt.Color.white);
-        Page_Title17.setText("back");
+        Page_Title17.setText("Mobile No");
         iregister.add(Page_Title17);
-        Page_Title17.setBounds(110, 480, 50, 21);
+        Page_Title17.setBounds(190, 210, 90, 21);
 
         white_transparent_panel_title5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
         white_transparent_panel_title5.setText("larasparet");
@@ -268,20 +268,13 @@ public class Login1 extends javax.swing.JFrame {
         Page_Title18.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title18.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title18.setForeground(java.awt.Color.white);
-        Page_Title18.setText("Username");
+        Page_Title18.setText("username");
         iregister.add(Page_Title18);
         Page_Title18.setBounds(190, 280, 90, 20);
 
-        Page_Title39.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title39.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
-        Page_Title39.setForeground(java.awt.Color.white);
-        Page_Title39.setText("Mobile No");
-        iregister.add(Page_Title39);
-        Page_Title39.setBounds(190, 210, 90, 21);
-
         bacground_login1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
         iregister.add(bacground_login1);
-        bacground_login1.setBounds(-130, -510, 870, 1130);
+        bacground_login1.setBounds(-140, -540, 870, 1130);
 
         main_panel.add(iregister, "card2");
 
@@ -745,6 +738,20 @@ public class Login1 extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -784,7 +791,6 @@ public class Login1 extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title36;
     private javax.swing.JLabel Page_Title37;
     private javax.swing.JLabel Page_Title38;
-    private javax.swing.JLabel Page_Title39;
     private javax.swing.JLabel Page_Title40;
     private javax.swing.JLabel Page_Title41;
     private javax.swing.JLabel Page_Title42;

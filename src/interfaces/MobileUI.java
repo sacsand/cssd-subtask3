@@ -1,103 +1,129 @@
 package interfaces;
 
+import controllers.AccountControl;
+import entities.MobileAccount;
+import static interfaces.Login.jTextField_topUpAmount;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author sachintha
  */
-public class Main extends javax.swing.JFrame {
+public class MobileUI extends javax.swing.JFrame {
+
+    private static MobileAccount tempMobileAccount;
+    public static String mobibleAccNo;
 
     /**
      * Creates new form Main
      */
-    public Main() {
+    public MobileUI() {
         initComponents();
+        DateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
+        //String dateString = formatter.format(tempMobileAccount.getCreatedDate());
+       
         
-        
-    }
-    
-    ArrayList<String> al = new ArrayList<>();
-    
-    
-    /**
-     * 
-     */
-    public void selectLangauge()
-    {
-        
-    }
-    
-     /**
-     * 
-     */
-    public void addMobileNumber(int mobileNumber)
-    {
-        
-    }
-    
-     /**
-     * 
-     */
-    public void selectPaymentMethod()
-    {
-        String s;
-        
-        {
-            
+        try {
+            AccountControl.deserialize();//deserialize mobile accounts
+            tempMobileAccount = AccountControl.findMobileAccountByAccountNumber(mobibleAccNo);//get the user object
+            jLabel_mobileAccBalance.setText(String.valueOf(tempMobileAccount.getAmount()));//set balance lable
+            jLabel_mobileAccMobileNo.setText(String.valueOf(tempMobileAccount.getSubscriberId()));//set mobile number label
+            jLable_mobileACreatedDate.setText(formatter.format(tempMobileAccount.getCreatedDate()));//set account creaed date lable
+            jLable_mobileAexpireDate1.setText(formatter.format(tempMobileAccount.getExpireDate()));//set expire date lable
+            Page_Title13.setText(tempMobileAccount.getPackageType());//set package type lable
+        } catch (IOException ex) {
+            Logger.getLogger(MobileUI.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(MobileUI.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NullPointerException ex) {
+            System.out.println("null pointss");
         }
-        
+
+        // System.out.println(tempMobileAccount.getAmount());
     }
-    
-     /**
-     * 
-     */
-    public void topUpAccount()
-    {
-        
-    }
-    
-     /**
-     * 
-     */
-    public void showMap()
-    {
-        
-    }
-    
-     /**
-     * 
-     */
-    public ArrayList showRoutes()
-    {
-      return null;  
-    }
-    
+
+    ArrayList<String> al = new ArrayList<>();
+
     /**
-     * 
+     *
      */
-    public void showHistory()
-    {
-      
+    public void selectLangauge() {
+
     }
-    
-    
+
+    /**
+     *
+     */
+    public void addMobileNumber(int mobileNumber) {
+
+    }
+
+    /**
+     *
+     */
+    public void selectPaymentMethod() {
+        String s;
+
+        {
+
+        }
+
+    }
+
+    /**
+     *
+     */
+    public static void topUpAccount(double amount) {
+        tempMobileAccount = AccountControl.findMobileAccountByAccountNumber(mobibleAccNo);
+        tempMobileAccount.topUp(amount);
+        try {
+            AccountControl.serialize();
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        System.out.println(tempMobileAccount.getAmount());
+
+    }
+
+    /**
+     *
+     */
+    public void showMap() {
+
+    }
+
+    /**
+     *
+     */
+    public ArrayList showRoutes() {
+        return null;
+    }
+
+    /**
+     *
+     */
+    public void showHistory() {
+
+    }
+
     /**
      * swith between panel method.
+     *
      * @param panel
      */
-   
-    
-    
-            
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -108,40 +134,50 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
         outerPanel = new java.awt.Panel();
         Home = new java.awt.Panel();
         Page_Title11 = new javax.swing.JLabel();
-        Page_Title12 = new javax.swing.JLabel();
-        Page_Title13 = new javax.swing.JLabel();
         s_icon9 = new javax.swing.JLabel();
+        Page_Title12 = new javax.swing.JLabel();
+        jLable_mobileACreatedDate = new javax.swing.JLabel();
+        Page_Title13 = new javax.swing.JLabel();
+        Page_Title15 = new javax.swing.JLabel();
+        jLabel_mobileAccBalance = new javax.swing.JLabel();
+        jLable_mobileACreatedDate1 = new javax.swing.JLabel();
+        s_icon10 = new javax.swing.JLabel();
+        Page_Title21 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         s_icon8 = new javax.swing.JLabel();
         Page_Title14 = new javax.swing.JLabel();
-        Page_Title15 = new javax.swing.JLabel();
         white_transparent_panel_title6 = new javax.swing.JLabel();
         white_transparent_panel_title5 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         white_transparent_panel_title8 = new javax.swing.JLabel();
-        Page_Title22 = new javax.swing.JLabel();
-        Page_Title23 = new javax.swing.JLabel();
+        jLabel_mobileAccMobileNo = new javax.swing.JLabel();
+        jLable_mobileAexpireDate1 = new javax.swing.JLabel();
+        jLable_mobileAexpireDate = new javax.swing.JLabel();
         Page_Title24 = new javax.swing.JLabel();
         Page_Title25 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         Page_Title20 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         Page_Title16 = new javax.swing.JLabel();
-        Page_Title21 = new javax.swing.JLabel();
         Page_Title17 = new javax.swing.JLabel();
         background_img4 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         Page_Title18 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         Page_Title19 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         white_transparent_panel_title7 = new javax.swing.JLabel();
         Account = new java.awt.Panel();
         Page_Title4 = new javax.swing.JLabel();
-        jText_Account = new javax.swing.JTextField();
-        jText_Account1 = new javax.swing.JTextField();
-        jText_Account2 = new javax.swing.JTextField();
+        jTextField_mobileAccTopUpPin = new javax.swing.JTextField();
+        jTextField_topUpAmount = new javax.swing.JTextField();
+        jTextField_mobileAccTopUpCardNo = new javax.swing.JTextField();
         Page_Title8 = new javax.swing.JLabel();
         Page_Title10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -158,25 +194,21 @@ public class Main extends javax.swing.JFrame {
         background_img3 = new javax.swing.JLabel();
         Page_Title6 = new javax.swing.JLabel();
         s_icon1 = new javax.swing.JLabel();
+        s_icon5 = new javax.swing.JLabel();
         s_icon2 = new javax.swing.JLabel();
         main_title = new javax.swing.JLabel();
         s_icon3 = new javax.swing.JLabel();
         sideBlack1 = new javax.swing.JLabel();
         img_black2 = new javax.swing.JLabel();
         Backgroud_iamge = new javax.swing.JLabel();
+        s_icon4 = new javax.swing.JLabel();
 
         jInternalFrame1.setVisible(true);
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(450, 100));
-        setMinimumSize(new java.awt.Dimension(325, 550));
+        setMinimumSize(new java.awt.Dimension(325, 520));
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -185,25 +217,11 @@ public class Main extends javax.swing.JFrame {
         Home.setLayout(null);
 
         Page_Title11.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title11.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title11.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title11.setForeground(java.awt.Color.white);
         Page_Title11.setText("50");
         Home.add(Page_Title11);
-        Page_Title11.setBounds(200, 120, 60, 17);
-
-        Page_Title12.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 1, 14)); // NOI18N
-        Page_Title12.setForeground(java.awt.Color.white);
-        Page_Title12.setText("Account Infromation");
-        Home.add(Page_Title12);
-        Page_Title12.setBounds(50, 220, 160, 17);
-
-        Page_Title13.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title13.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
-        Page_Title13.setForeground(java.awt.Color.white);
-        Page_Title13.setText("Account Balance");
-        Home.add(Page_Title13);
-        Page_Title13.setBounds(50, 290, 130, 17);
+        Page_Title11.setBounds(200, 160, 60, 17);
 
         s_icon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small.png"))); // NOI18N
         s_icon9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -212,7 +230,75 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Home.add(s_icon9);
-        s_icon9.setBounds(10, 110, 30, 40);
+        s_icon9.setBounds(150, 170, 40, 50);
+
+        Page_Title12.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 0, 16)); // NOI18N
+        Page_Title12.setForeground(java.awt.Color.white);
+        Page_Title12.setText("Account Information");
+        Home.add(Page_Title12);
+        Page_Title12.setBounds(20, 230, 190, 17);
+
+        jLable_mobileACreatedDate.setBackground(new java.awt.Color(102, 102, 102));
+        jLable_mobileACreatedDate.setFont(new java.awt.Font("Ubuntu Light", 0, 16)); // NOI18N
+        jLable_mobileACreatedDate.setForeground(java.awt.Color.white);
+        jLable_mobileACreatedDate.setText("2012-1-12");
+        Home.add(jLable_mobileACreatedDate);
+        jLable_mobileACreatedDate.setBounds(180, 300, 100, 20);
+
+        Page_Title13.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title13.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title13.setForeground(java.awt.Color.white);
+        Page_Title13.setText("50");
+        Home.add(Page_Title13);
+        Page_Title13.setBounds(140, 460, 60, 17);
+
+        Page_Title15.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title15.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title15.setForeground(java.awt.Color.white);
+        Page_Title15.setText("Traveled Times");
+        Home.add(Page_Title15);
+        Page_Title15.setBounds(30, 450, 110, 17);
+
+        jLabel_mobileAccBalance.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel_mobileAccBalance.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
+        jLabel_mobileAccBalance.setForeground(java.awt.Color.white);
+        jLabel_mobileAccBalance.setText("$100");
+        Home.add(jLabel_mobileAccBalance);
+        jLabel_mobileAccBalance.setBounds(40, 160, 80, 17);
+
+        jLable_mobileACreatedDate1.setBackground(new java.awt.Color(102, 102, 102));
+        jLable_mobileACreatedDate1.setFont(new java.awt.Font("Ubuntu Light", 0, 16)); // NOI18N
+        jLable_mobileACreatedDate1.setForeground(java.awt.Color.white);
+        jLable_mobileACreatedDate1.setText("Created Date");
+        Home.add(jLable_mobileACreatedDate1);
+        jLable_mobileACreatedDate1.setBounds(30, 300, 110, 20);
+
+        s_icon10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small.png"))); // NOI18N
+        s_icon10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                s_icon10MouseClicked(evt);
+            }
+        });
+        Home.add(s_icon10);
+        s_icon10.setBounds(10, 160, 40, 70);
+
+        Page_Title21.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title21.setFont(new java.awt.Font("Ubuntu Light", 0, 16)); // NOI18N
+        Page_Title21.setForeground(java.awt.Color.white);
+        Page_Title21.setText("Account Balance");
+        Home.add(Page_Title21);
+        Page_Title21.setBounds(20, 130, 118, 21);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel9.setText("Add");
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel9);
+        jLabel9.setBounds(10, 130, 130, 80);
 
         s_icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small.png"))); // NOI18N
         s_icon8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -224,18 +310,11 @@ public class Main extends javax.swing.JFrame {
         s_icon8.setBounds(20, 0, 30, 40);
 
         Page_Title14.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title14.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title14.setFont(new java.awt.Font("Ubuntu Light", 0, 16)); // NOI18N
         Page_Title14.setForeground(java.awt.Color.white);
         Page_Title14.setText("Traveled Times");
         Home.add(Page_Title14);
-        Page_Title14.setBounds(50, 120, 110, 17);
-
-        Page_Title15.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title15.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
-        Page_Title15.setForeground(java.awt.Color.white);
-        Page_Title15.setText("$100");
-        Home.add(Page_Title15);
-        Page_Title15.setBounds(200, 160, 110, 17);
+        Page_Title14.setBounds(160, 130, 120, 20);
 
         white_transparent_panel_title6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
         white_transparent_panel_title6.setText("larasparet");
@@ -255,7 +334,17 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Home.add(white_transparent_panel_title5);
-        white_transparent_panel_title5.setBounds(-230, 220, 540, 20);
+        white_transparent_panel_title5.setBounds(10, 150, 130, 20);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel12.setText("Add");
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel12);
+        jLabel12.setBounds(10, 80, 280, 40);
 
         white_transparent_panel_title8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
         white_transparent_panel_title8.setText("larasparet");
@@ -265,37 +354,44 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Home.add(white_transparent_panel_title8);
-        white_transparent_panel_title8.setBounds(-230, 90, 540, 20);
+        white_transparent_panel_title8.setBounds(-180, 440, 540, 20);
 
-        Page_Title22.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title22.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
-        Page_Title22.setForeground(java.awt.Color.white);
-        Page_Title22.setText("0771929434");
-        Page_Title22.setToolTipText("0771929434");
-        Home.add(Page_Title22);
-        Page_Title22.setBounds(180, 260, 130, 17);
+        jLabel_mobileAccMobileNo.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel_mobileAccMobileNo.setFont(new java.awt.Font("Ubuntu Light", 0, 16)); // NOI18N
+        jLabel_mobileAccMobileNo.setForeground(java.awt.Color.white);
+        jLabel_mobileAccMobileNo.setText("0771929434");
+        jLabel_mobileAccMobileNo.setToolTipText("0771929434");
+        Home.add(jLabel_mobileAccMobileNo);
+        jLabel_mobileAccMobileNo.setBounds(180, 260, 100, 20);
 
-        Page_Title23.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title23.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
-        Page_Title23.setForeground(java.awt.Color.white);
-        Page_Title23.setText("Account Balance");
-        Home.add(Page_Title23);
-        Page_Title23.setBounds(50, 320, 130, 17);
+        jLable_mobileAexpireDate1.setBackground(new java.awt.Color(102, 102, 102));
+        jLable_mobileAexpireDate1.setFont(new java.awt.Font("Ubuntu Light", 0, 16)); // NOI18N
+        jLable_mobileAexpireDate1.setForeground(java.awt.Color.white);
+        jLable_mobileAexpireDate1.setText("2014-5-9");
+        Home.add(jLable_mobileAexpireDate1);
+        jLable_mobileAexpireDate1.setBounds(180, 340, 90, 20);
+
+        jLable_mobileAexpireDate.setBackground(new java.awt.Color(102, 102, 102));
+        jLable_mobileAexpireDate.setFont(new java.awt.Font("Ubuntu Light", 0, 15)); // NOI18N
+        jLable_mobileAexpireDate.setForeground(java.awt.Color.white);
+        jLable_mobileAexpireDate.setText("Expire Date");
+        Home.add(jLable_mobileAexpireDate);
+        jLable_mobileAexpireDate.setBounds(30, 340, 110, 18);
 
         Page_Title24.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title24.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title24.setFont(new java.awt.Font("Ubuntu Light", 0, 15)); // NOI18N
         Page_Title24.setForeground(java.awt.Color.white);
         Page_Title24.setText("Mobile No");
         Page_Title24.setToolTipText("");
         Home.add(Page_Title24);
-        Page_Title24.setBounds(50, 260, 130, 17);
+        Page_Title24.setBounds(30, 260, 130, 18);
 
         Page_Title25.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title25.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title25.setForeground(java.awt.Color.white);
         Page_Title25.setText("Account Balance");
         Home.add(Page_Title25);
-        Page_Title25.setBounds(50, 350, 130, 17);
+        Page_Title25.setBounds(30, 390, 130, 20);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel2.setText("Add");
@@ -305,7 +401,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Home.add(jLabel2);
-        jLabel2.setBounds(10, 90, 30, 390);
+        jLabel2.setBounds(10, 230, 280, 20);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel6.setText("Add");
@@ -315,14 +411,24 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Home.add(jLabel6);
-        jLabel6.setBounds(10, 90, 300, 390);
+        jLabel6.setBounds(150, 130, 140, 80);
 
         Page_Title20.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title20.setFont(new java.awt.Font("Ubuntu Light", 1, 14)); // NOI18N
         Page_Title20.setForeground(java.awt.Color.white);
         Page_Title20.setText("Dashbord");
         Home.add(Page_Title20);
-        Page_Title20.setBounds(50, 90, 80, 17);
+        Page_Title20.setBounds(20, 40, 80, 17);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel10.setText("Add");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel10);
+        jLabel10.setBounds(10, 230, 280, 190);
 
         Page_Title16.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title16.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
@@ -331,24 +437,27 @@ public class Main extends javax.swing.JFrame {
         Home.add(Page_Title16);
         Page_Title16.setBounds(60, 0, 140, 21);
 
-        Page_Title21.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title21.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
-        Page_Title21.setForeground(java.awt.Color.white);
-        Page_Title21.setText("Account Balance");
-        Home.add(Page_Title21);
-        Page_Title21.setBounds(50, 160, 130, 17);
-
         Page_Title17.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title17.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title17.setForeground(java.awt.Color.white);
         Page_Title17.setText("Hi , username");
         Home.add(Page_Title17);
-        Page_Title17.setBounds(20, 50, 220, 21);
+        Page_Title17.setBounds(100, 90, 220, 21);
 
         background_img4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
         background_img4.setText("larasparet");
         Home.add(background_img4);
         background_img4.setBounds(-320, -570, 670, 1160);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel11.setText("Add");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel11);
+        jLabel11.setBounds(10, 210, 200, 50);
 
         Page_Title18.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title18.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
@@ -367,12 +476,42 @@ public class Main extends javax.swing.JFrame {
         Home.add(jLabel5);
         jLabel5.setBounds(10, 90, 260, 280);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel4.setText("Add");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel4);
+        jLabel4.setBounds(10, 270, 210, 210);
+
         Page_Title19.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title19.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title19.setForeground(java.awt.Color.white);
         Page_Title19.setText("Account Balance");
         Home.add(Page_Title19);
         Page_Title19.setBounds(50, 200, 110, 17);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel7.setText("Add");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel7);
+        jLabel7.setBounds(20, 70, 140, 80);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel8.setText("Add");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        Home.add(jLabel8);
+        jLabel8.setBounds(10, 50, 140, 80);
 
         white_transparent_panel_title7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
         white_transparent_panel_title7.setText("larasparet");
@@ -400,36 +539,41 @@ public class Main extends javax.swing.JFrame {
         Account.add(Page_Title4);
         Page_Title4.setBounds(200, 350, 60, 17);
 
-        jText_Account.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_mobileAccTopUpPin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jText_AccountActionPerformed(evt);
+                jTextField_mobileAccTopUpPinActionPerformed(evt);
             }
         });
-        Account.add(jText_Account);
-        jText_Account.setBounds(140, 230, 140, 23);
+        Account.add(jTextField_mobileAccTopUpPin);
+        jTextField_mobileAccTopUpPin.setBounds(140, 230, 140, 23);
 
-        jText_Account1.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_topUpAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jText_Account1ActionPerformed(evt);
+                jTextField_topUpAmountActionPerformed(evt);
             }
         });
-        Account.add(jText_Account1);
-        jText_Account1.setBounds(140, 280, 140, 23);
+        Account.add(jTextField_topUpAmount);
+        jTextField_topUpAmount.setBounds(140, 280, 140, 23);
 
-        jText_Account2.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_mobileAccTopUpCardNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jText_Account2ActionPerformed(evt);
+                jTextField_mobileAccTopUpCardNoActionPerformed(evt);
             }
         });
-        Account.add(jText_Account2);
-        jText_Account2.setBounds(140, 180, 140, 23);
+        Account.add(jTextField_mobileAccTopUpCardNo);
+        jTextField_mobileAccTopUpCardNo.setBounds(140, 180, 140, 23);
 
         Page_Title8.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title8.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title8.setForeground(java.awt.Color.white);
-        Page_Title8.setText("Top Up");
+        Page_Title8.setText("  Top Up");
+        Page_Title8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Page_Title8MouseClicked(evt);
+            }
+        });
         Account.add(Page_Title8);
-        Page_Title8.setBounds(50, 350, 60, 17);
+        Page_Title8.setBounds(40, 340, 90, 40);
 
         Page_Title10.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title10.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
@@ -446,7 +590,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
         Account.add(jLabel1);
-        jLabel1.setBounds(30, 340, 110, 40);
+        jLabel1.setBounds(20, 340, 110, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/callout-red-bg (2).png"))); // NOI18N
         jLabel3.setText("Add");
@@ -548,6 +692,15 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(s_icon1);
         s_icon1.setBounds(0, 140, 30, 40);
 
+        s_icon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small_map.png"))); // NOI18N
+        s_icon5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                s_icon5MouseClicked(evt);
+            }
+        });
+        getContentPane().add(s_icon5);
+        s_icon5.setBounds(0, 180, 30, 40);
+
         s_icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small_map.png"))); // NOI18N
         s_icon2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -561,7 +714,7 @@ public class Main extends javax.swing.JFrame {
         main_title.setForeground(java.awt.Color.white);
         main_title.setText("Lydia v 2.0");
         getContentPane().add(main_title);
-        main_title.setBounds(40, 0, 150, 22);
+        main_title.setBounds(40, 0, 90, 22);
 
         s_icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small_home.png"))); // NOI18N
         s_icon3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -588,6 +741,15 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(Backgroud_iamge);
         Backgroud_iamge.setBounds(-220, -460, 670, 1020);
 
+        s_icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small_1.png"))); // NOI18N
+        s_icon4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                s_icon4MouseClicked(evt);
+            }
+        });
+        getContentPane().add(s_icon4);
+        s_icon4.setBounds(0, 140, 30, 40);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -600,12 +762,10 @@ public class Main extends javax.swing.JFrame {
         outerPanel.add(Home);
         outerPanel.repaint();
         outerPanel.revalidate();
-        
-        
     }//GEN-LAST:event_s_icon3MouseClicked
 
     private void s_icon1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon1MouseClicked
-            // removing pane
+        //removing pane
         outerPanel.removeAll();
         outerPanel.repaint();
         outerPanel.revalidate();
@@ -613,7 +773,7 @@ public class Main extends javax.swing.JFrame {
         outerPanel.add(Account);
         outerPanel.repaint();
         outerPanel.revalidate();
-          
+
     }//GEN-LAST:event_s_icon1MouseClicked
 
     private void s_icon2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon2MouseClicked
@@ -629,7 +789,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_s_icon7MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-              // removing pane
+        // removing pane
         outerPanel.removeAll();
         outerPanel.repaint();
         outerPanel.revalidate();
@@ -637,24 +797,24 @@ public class Main extends javax.swing.JFrame {
         outerPanel.add(Home);
         outerPanel.repaint();
         outerPanel.revalidate();
-        
+
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void jText_Account2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_Account2ActionPerformed
+    private void jTextField_mobileAccTopUpCardNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_mobileAccTopUpCardNoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jText_Account2ActionPerformed
+    }//GEN-LAST:event_jTextField_mobileAccTopUpCardNoActionPerformed
 
-    private void jText_Account1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_Account1ActionPerformed
+    private void jTextField_topUpAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_topUpAmountActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jText_Account1ActionPerformed
+    }//GEN-LAST:event_jTextField_topUpAmountActionPerformed
 
-    private void jText_AccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_AccountActionPerformed
+    private void jTextField_mobileAccTopUpPinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_mobileAccTopUpPinActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jText_AccountActionPerformed
+    }//GEN-LAST:event_jTextField_mobileAccTopUpPinActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
@@ -669,7 +829,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_white_transparent_panel_title5MouseClicked
 
     private void Page_Title4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Page_Title4MouseClicked
-         // removing pane
+        // removing pane
         outerPanel.removeAll();
         outerPanel.repaint();
         outerPanel.revalidate();
@@ -677,12 +837,8 @@ public class Main extends javax.swing.JFrame {
         outerPanel.add(Home);
         outerPanel.repaint();
         outerPanel.revalidate();
-        
-    }//GEN-LAST:event_Page_Title4MouseClicked
 
-    private void s_icon9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon9MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_s_icon9MouseClicked
+    }//GEN-LAST:event_Page_Title4MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
@@ -708,6 +864,77 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_paypalActionPerformed
 
+    private void Page_Title8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Page_Title8MouseClicked
+        // TODO add your handling code here:
+
+        if ((!jTextField_topUpAmount.getText().isEmpty()) && (!jTextField_mobileAccTopUpCardNo.getText().isEmpty()) && (!jTextField_mobileAccTopUpPin.getText().isEmpty())) {
+            try {
+
+                topUpAccount(Double.parseDouble(jTextField_topUpAmount.getText()));
+                outerPanel.removeAll();
+                outerPanel.repaint();
+                outerPanel.revalidate();
+                //adding pane
+                outerPanel.add(Home);
+                outerPanel.repaint();
+                outerPanel.revalidate();
+
+                jLabel_mobileAccBalance.setText(String.valueOf(tempMobileAccount.getAmount()));
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "please enter a valid amount", "Message", JOptionPane.INFORMATION_MESSAGE);
+
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Please Fill All fields", "Message", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+
+    }//GEN-LAST:event_Page_Title8MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void s_icon10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_s_icon10MouseClicked
+
+    private void s_icon4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_s_icon4MouseClicked
+
+    private void s_icon9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_s_icon9MouseClicked
+
+    private void s_icon5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_s_icon5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -725,20 +952,27 @@ public class Main extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MobileUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MobileUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MobileUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MobileUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);
+                new MobileUI().setVisible(true);
             }
         });
     }
@@ -759,8 +993,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title19;
     private javax.swing.JLabel Page_Title20;
     private javax.swing.JLabel Page_Title21;
-    private javax.swing.JLabel Page_Title22;
-    private javax.swing.JLabel Page_Title23;
     private javax.swing.JLabel Page_Title24;
     private javax.swing.JLabel Page_Title25;
     private javax.swing.JLabel Page_Title3;
@@ -775,23 +1007,37 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel img_black2;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JList jList1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jText_Account;
-    private javax.swing.JTextField jText_Account1;
-    private javax.swing.JTextField jText_Account2;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel_mobileAccBalance;
+    private javax.swing.JLabel jLabel_mobileAccMobileNo;
+    private javax.swing.JLabel jLable_mobileACreatedDate;
+    private javax.swing.JLabel jLable_mobileACreatedDate1;
+    private javax.swing.JLabel jLable_mobileAexpireDate;
+    private javax.swing.JLabel jLable_mobileAexpireDate1;
+    private javax.swing.JTextField jTextField_mobileAccTopUpCardNo;
+    private javax.swing.JTextField jTextField_mobileAccTopUpPin;
+    private javax.swing.JTextField jTextField_topUpAmount;
     private javax.swing.JLabel main_title;
-    private java.awt.Panel outerPanel;
+    public static java.awt.Panel outerPanel;
     private javax.swing.JRadioButton paypal;
     private javax.swing.JRadioButton paypal1;
     private javax.swing.JRadioButton paypal2;
     private javax.swing.JLabel s_icon1;
+    private javax.swing.JLabel s_icon10;
     private javax.swing.JLabel s_icon2;
     private javax.swing.JLabel s_icon3;
+    private javax.swing.JLabel s_icon4;
+    private javax.swing.JLabel s_icon5;
     private javax.swing.JLabel s_icon7;
     private javax.swing.JLabel s_icon8;
     private javax.swing.JLabel s_icon9;
