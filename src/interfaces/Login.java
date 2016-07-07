@@ -117,6 +117,7 @@ public class Login extends javax.swing.JFrame {
         bacground_login = new javax.swing.JLabel();
         iregister = new javax.swing.JPanel();
         Page_Title11 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         Page_Title13 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextField_mobileNumber = new javax.swing.JTextField();
@@ -214,6 +215,12 @@ public class Login extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-bueSmall.png"))); // NOI18N
         jPanel3.add(jLabel9);
         jLabel9.setBounds(160, 330, 40, 40);
+
+        jTextField_loginMobileNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_loginMobileNumberActionPerformed(evt);
+            }
+        });
         jPanel3.add(jTextField_loginMobileNumber);
         jTextField_loginMobileNumber.setBounds(160, 270, 170, 23);
 
@@ -314,6 +321,10 @@ public class Login extends javax.swing.JFrame {
         });
         iregister.add(Page_Title11);
         Page_Title11.setBounds(130, 390, 210, 40);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-bueSmall.png"))); // NOI18N
+        iregister.add(jLabel14);
+        jLabel14.setBounds(140, 390, 29, 40);
 
         Page_Title13.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title13.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
@@ -1041,6 +1052,10 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Page_Title45MouseClicked
 
+    private void jTextField_loginMobileNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_loginMobileNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_loginMobileNumberActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1170,6 +1185,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel3_mobileAccBalance;

@@ -31,6 +31,7 @@ public class PayStationUi extends javax.swing.JFrame {
         atm_home = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         Page_Title30 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
         Page_Title5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Page_Title7 = new javax.swing.JLabel();
@@ -109,6 +110,10 @@ public class PayStationUi extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         Page_Title38 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
+        demo = new javax.swing.JPanel();
+        Page_Title43 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(629, 420));
@@ -135,6 +140,15 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title30.setText("Select a option");
         atm_home.add(Page_Title30);
         Page_Title30.setBounds(50, 90, 170, 30);
+
+        jLabel37.setText("Demo");
+        jLabel37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel37MouseClicked(evt);
+            }
+        });
+        atm_home.add(jLabel37);
+        jLabel37.setBounds(530, 40, 40, 15);
 
         Page_Title5.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title5.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
@@ -697,6 +711,31 @@ public class PayStationUi extends javax.swing.JFrame {
 
         atm_outer.add(select_package, "card2");
 
+        demo.setLayout(null);
+
+        Page_Title43.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title43.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
+        Page_Title43.setForeground(java.awt.Color.white);
+        Page_Title43.setText("Lydia ATM");
+        demo.add(Page_Title43);
+        Page_Title43.setBounds(20, 0, 360, 60);
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel41.setText("Add");
+        jLabel41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel41MouseClicked(evt);
+            }
+        });
+        demo.add(jLabel41);
+        jLabel41.setBounds(0, 0, 630, 60);
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        demo.add(jLabel42);
+        jLabel42.setBounds(-10, -700, 695, 1136);
+
+        atm_outer.add(demo, "card2");
+
         getContentPane().add(atm_outer);
         atm_outer.setBounds(0, 0, 730, 400);
 
@@ -926,6 +965,21 @@ public class PayStationUi extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel32MouseEntered
 
+    private void jLabel37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel37MouseClicked
+        // removing pane
+        atm_outer.removeAll();
+        atm_outer.repaint();
+        atm_outer.revalidate();
+        //adding pane
+        atm_outer.add(demo);
+        atm_outer.repaint();
+        atm_outer.revalidate();
+    }//GEN-LAST:event_jLabel37MouseClicked
+
+    private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel41MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -993,6 +1047,7 @@ public class PayStationUi extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title37;
     private javax.swing.JLabel Page_Title38;
     private javax.swing.JLabel Page_Title39;
+    private javax.swing.JLabel Page_Title43;
     private javax.swing.JLabel Page_Title5;
     private javax.swing.JLabel Page_Title6;
     private javax.swing.JLabel Page_Title7;
@@ -1005,6 +1060,7 @@ public class PayStationUi extends javax.swing.JFrame {
     private javax.swing.JPanel card_pay;
     private javax.swing.JPanel card_selet;
     private javax.swing.JPanel cash_pay;
+    private javax.swing.JPanel demo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1035,7 +1091,10 @@ public class PayStationUi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

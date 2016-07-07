@@ -195,6 +195,25 @@ public class MobileUI extends javax.swing.JFrame {
         Page_Title5 = new javax.swing.JLabel();
         background_img3 = new javax.swing.JLabel();
         Page_Title6 = new javax.swing.JLabel();
+        Home1 = new java.awt.Panel();
+        jLabel13 = new javax.swing.JLabel();
+        s_icon13 = new javax.swing.JLabel();
+        white_transparent_panel_title9 = new javax.swing.JLabel();
+        white_transparent_panel_title10 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        Page_Title32 = new javax.swing.JLabel();
+        Page_Title33 = new javax.swing.JLabel();
+        Page_Title34 = new javax.swing.JLabel();
+        background_img5 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        Page_Title35 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        Page_Title36 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        white_transparent_panel_title12 = new javax.swing.JLabel();
         s_icon1 = new javax.swing.JLabel();
         s_icon5 = new javax.swing.JLabel();
         s_icon2 = new javax.swing.JLabel();
@@ -690,6 +709,169 @@ public class MobileUI extends javax.swing.JFrame {
 
         outerPanel.add(Account, "card4");
 
+        Home1.setLayout(null);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel13.setText("Add");
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
+        Home1.add(jLabel13);
+        jLabel13.setBounds(0, 40, 130, 80);
+
+        s_icon13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small.png"))); // NOI18N
+        s_icon13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                s_icon13MouseClicked(evt);
+            }
+        });
+        Home1.add(s_icon13);
+        s_icon13.setBounds(20, 0, 30, 40);
+
+        white_transparent_panel_title9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
+        white_transparent_panel_title9.setText("larasparet");
+        white_transparent_panel_title9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                white_transparent_panel_title9MouseClicked(evt);
+            }
+        });
+        Home1.add(white_transparent_panel_title9);
+        white_transparent_panel_title9.setBounds(-260, 0, 710, 20);
+
+        white_transparent_panel_title10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
+        white_transparent_panel_title10.setText("larasparet");
+        white_transparent_panel_title10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                white_transparent_panel_title10MouseClicked(evt);
+            }
+        });
+        Home1.add(white_transparent_panel_title10);
+        white_transparent_panel_title10.setBounds(10, 150, 130, 20);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel14.setText("Add");
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
+        Home1.add(jLabel14);
+        jLabel14.setBounds(10, 40, 280, 40);
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel16.setText("Add");
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
+        Home1.add(jLabel16);
+        jLabel16.setBounds(130, 40, 140, 80);
+
+        Page_Title32.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title32.setFont(new java.awt.Font("Ubuntu Light", 1, 14)); // NOI18N
+        Page_Title32.setForeground(java.awt.Color.white);
+        Page_Title32.setText("Dashbord");
+        Home1.add(Page_Title32);
+        Page_Title32.setBounds(20, 40, 80, 17);
+
+        Page_Title33.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title33.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title33.setForeground(java.awt.Color.white);
+        Page_Title33.setText("Home");
+        Home1.add(Page_Title33);
+        Page_Title33.setBounds(60, 0, 140, 21);
+
+        Page_Title34.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title34.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title34.setForeground(java.awt.Color.white);
+        Page_Title34.setText("Hi , username");
+        Home1.add(Page_Title34);
+        Page_Title34.setBounds(100, 90, 220, 21);
+
+        background_img5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        background_img5.setText("larasparet");
+        Home1.add(background_img5);
+        background_img5.setBounds(-320, -570, 670, 1160);
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel18.setText("Add");
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
+        Home1.add(jLabel18);
+        jLabel18.setBounds(10, 210, 200, 50);
+
+        Page_Title35.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title35.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title35.setForeground(java.awt.Color.white);
+        Page_Title35.setText("Add Your Account here....");
+        Home1.add(Page_Title35);
+        Page_Title35.setBounds(10, 50, 220, 21);
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel19.setText("Add");
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+        Home1.add(jLabel19);
+        jLabel19.setBounds(10, 90, 260, 280);
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel20.setText("Add");
+        jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel20MouseClicked(evt);
+            }
+        });
+        Home1.add(jLabel20);
+        jLabel20.setBounds(10, 270, 210, 210);
+
+        Page_Title36.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title36.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title36.setForeground(java.awt.Color.white);
+        Page_Title36.setText("Account Balance");
+        Home1.add(Page_Title36);
+        Page_Title36.setBounds(50, 200, 110, 17);
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel21.setText("Add");
+        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel21MouseClicked(evt);
+            }
+        });
+        Home1.add(jLabel21);
+        jLabel21.setBounds(20, 70, 140, 80);
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel22.setText("Add");
+        jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel22MouseClicked(evt);
+            }
+        });
+        Home1.add(jLabel22);
+        jLabel22.setBounds(10, 50, 140, 80);
+
+        white_transparent_panel_title12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
+        white_transparent_panel_title12.setText("larasparet");
+        white_transparent_panel_title12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                white_transparent_panel_title12MouseClicked(evt);
+            }
+        });
+        Home1.add(white_transparent_panel_title12);
+        white_transparent_panel_title12.setBounds(-230, 90, 540, 20);
+
+        outerPanel.add(Home1, "card4");
+
         getContentPane().add(outerPanel);
         outerPanel.setBounds(30, 30, 320, 500);
 
@@ -945,6 +1127,54 @@ public class MobileUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_s_icon5MouseClicked
 
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void s_icon13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_s_icon13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_s_icon13MouseClicked
+
+    private void white_transparent_panel_title9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_white_transparent_panel_title9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_white_transparent_panel_title9MouseClicked
+
+    private void white_transparent_panel_title10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_white_transparent_panel_title10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_white_transparent_panel_title10MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel18MouseClicked
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel21MouseClicked
+
+    private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel22MouseClicked
+
+    private void white_transparent_panel_title12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_white_transparent_panel_title12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_white_transparent_panel_title12MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -991,6 +1221,7 @@ public class MobileUI extends javax.swing.JFrame {
     private java.awt.Panel Account;
     private javax.swing.JLabel Backgroud_iamge;
     private java.awt.Panel Home;
+    private java.awt.Panel Home1;
     private javax.swing.JLabel Page_Title10;
     private javax.swing.JLabel Page_Title11;
     private javax.swing.JLabel Page_Title12;
@@ -1006,6 +1237,11 @@ public class MobileUI extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title24;
     private javax.swing.JLabel Page_Title25;
     private javax.swing.JLabel Page_Title3;
+    private javax.swing.JLabel Page_Title32;
+    private javax.swing.JLabel Page_Title33;
+    private javax.swing.JLabel Page_Title34;
+    private javax.swing.JLabel Page_Title35;
+    private javax.swing.JLabel Page_Title36;
     private javax.swing.JLabel Page_Title4;
     private javax.swing.JLabel Page_Title5;
     private javax.swing.JLabel Page_Title6;
@@ -1014,6 +1250,7 @@ public class MobileUI extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title9;
     private javax.swing.JLabel background_img3;
     private javax.swing.JLabel background_img4;
+    private javax.swing.JLabel background_img5;
     private javax.swing.JLabel icon_blue;
     private javax.swing.JLabel icon_red;
     private javax.swing.JLabel img_black2;
@@ -1022,7 +1259,15 @@ public class MobileUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1046,6 +1291,7 @@ public class MobileUI extends javax.swing.JFrame {
     private javax.swing.JRadioButton paypal2;
     private javax.swing.JLabel s_icon1;
     private javax.swing.JLabel s_icon10;
+    private javax.swing.JLabel s_icon13;
     private javax.swing.JLabel s_icon2;
     private javax.swing.JLabel s_icon3;
     private javax.swing.JLabel s_icon4;
@@ -1054,10 +1300,13 @@ public class MobileUI extends javax.swing.JFrame {
     private javax.swing.JLabel s_icon8;
     private javax.swing.JLabel s_icon9;
     private javax.swing.JLabel sideBlack1;
+    private javax.swing.JLabel white_transparent_panel_title10;
+    private javax.swing.JLabel white_transparent_panel_title12;
     private javax.swing.JLabel white_transparent_panel_title4;
     private javax.swing.JLabel white_transparent_panel_title5;
     private javax.swing.JLabel white_transparent_panel_title6;
     private javax.swing.JLabel white_transparent_panel_title7;
     private javax.swing.JLabel white_transparent_panel_title8;
+    private javax.swing.JLabel white_transparent_panel_title9;
     // End of variables declaration//GEN-END:variables
 }
