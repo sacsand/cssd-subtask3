@@ -103,6 +103,7 @@ public class Login extends javax.swing.JFrame {
         main_panel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel_mobileSignIn = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jTextField_loginMobileNumber = new javax.swing.JTextField();
         Page_Title12 = new javax.swing.JLabel();
         Page_Title18 = new javax.swing.JLabel();
@@ -140,8 +141,11 @@ public class Login extends javax.swing.JFrame {
         Visa = new javax.swing.JLabel();
         Page_Title29 = new javax.swing.JLabel();
         bacground_login2 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         ipaid = new javax.swing.JPanel();
         Page_Title36 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         Page_Title37 = new javax.swing.JLabel();
         jLabel3_mobileAccBalance = new javax.swing.JLabel();
         Page_Title40 = new javax.swing.JLabel();
@@ -154,6 +158,7 @@ public class Login extends javax.swing.JFrame {
         bacground_login4 = new javax.swing.JLabel();
         ipay = new javax.swing.JPanel();
         jTextField_mobileAccTopUpPin = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
         Page_Title19 = new javax.swing.JLabel();
         Page_Title21 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -199,7 +204,11 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jLabel_mobileSignIn);
-        jLabel_mobileSignIn.setBounds(150, 330, 200, 40);
+        jLabel_mobileSignIn.setBounds(150, 330, 190, 40);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-bueSmall.png"))); // NOI18N
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(160, 330, 40, 40);
         jPanel3.add(jTextField_loginMobileNumber);
         jTextField_loginMobileNumber.setBounds(160, 270, 170, 23);
 
@@ -474,6 +483,10 @@ public class Login extends javax.swing.JFrame {
         ipayment_type.add(bacground_login2);
         bacground_login2.setBounds(-140, -540, 870, 1130);
 
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-bueSmall.png"))); // NOI18N
+        ipayment_type.add(jLabel12);
+        jLabel12.setBounds(160, 330, 40, 40);
+
         main_panel.add(ipayment_type, "card2");
 
         ipaid.setLayout(null);
@@ -484,6 +497,14 @@ public class Login extends javax.swing.JFrame {
         Page_Title36.setText("beta 2");
         ipaid.add(Page_Title36);
         Page_Title36.setBounds(250, 50, 260, 21);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-TOPall.png"))); // NOI18N
+        ipaid.add(jLabel10);
+        jLabel10.setBounds(140, 340, 30, 40);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
+        ipaid.add(jLabel11);
+        jLabel11.setBounds(140, 390, 29, 40);
 
         Page_Title37.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title37.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -573,6 +594,10 @@ public class Login extends javax.swing.JFrame {
         ipay.setLayout(null);
         ipay.add(jTextField_mobileAccTopUpPin);
         jTextField_mobileAccTopUpPin.setBounds(170, 300, 150, 23);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-TOPall.png"))); // NOI18N
+        ipay.add(jLabel13);
+        jLabel13.setBounds(160, 400, 30, 40);
 
         Page_Title19.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title19.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
@@ -1096,6 +1121,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel iregister;
     private javax.swing.JComboBox jComboBox_packageType;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel3_mobileAccBalance;
@@ -1104,6 +1133,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_mobileSignIn;
     private javax.swing.JLabel jLabel_packageNext;
     private javax.swing.JPanel jPanel3;

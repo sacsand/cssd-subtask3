@@ -179,7 +179,9 @@ public class MobileUI extends javax.swing.JFrame {
         jTextField_topUpAmount = new javax.swing.JTextField();
         jTextField_mobileAccTopUpCardNo = new javax.swing.JTextField();
         Page_Title8 = new javax.swing.JLabel();
+        icon_red = new javax.swing.JLabel();
         Page_Title10 = new javax.swing.JLabel();
+        icon_blue = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         s_icon7 = new javax.swing.JLabel();
@@ -537,7 +539,7 @@ public class MobileUI extends javax.swing.JFrame {
             }
         });
         Account.add(Page_Title4);
-        Page_Title4.setBounds(200, 350, 60, 17);
+        Page_Title4.setBounds(210, 347, 60, 20);
 
         jTextField_mobileAccTopUpPin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -573,7 +575,11 @@ public class MobileUI extends javax.swing.JFrame {
             }
         });
         Account.add(Page_Title8);
-        Page_Title8.setBounds(40, 340, 90, 40);
+        Page_Title8.setBounds(60, 340, 70, 40);
+
+        icon_red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-S11mall.png"))); // NOI18N
+        Account.add(icon_red);
+        icon_red.setBounds(170, 340, 30, 40);
 
         Page_Title10.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title10.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
@@ -581,6 +587,10 @@ public class MobileUI extends javax.swing.JFrame {
         Page_Title10.setText("Amount");
         Account.add(Page_Title10);
         Page_Title10.setBounds(30, 280, 100, 17);
+
+        icon_blue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-bueSmall.png"))); // NOI18N
+        Account.add(icon_blue);
+        icon_blue.setBounds(30, 340, 110, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel1.setText("Add");
@@ -712,9 +722,9 @@ public class MobileUI extends javax.swing.JFrame {
 
         main_title.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         main_title.setForeground(java.awt.Color.white);
-        main_title.setText("Lydia v 2.0");
+        main_title.setText("Lydia ");
         getContentPane().add(main_title);
-        main_title.setBounds(40, 0, 90, 22);
+        main_title.setBounds(10, 0, 90, 22);
 
         s_icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small_home.png"))); // NOI18N
         s_icon3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1004,6 +1014,8 @@ public class MobileUI extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title9;
     private javax.swing.JLabel background_img3;
     private javax.swing.JLabel background_img4;
+    private javax.swing.JLabel icon_blue;
+    private javax.swing.JLabel icon_red;
     private javax.swing.JLabel img_black2;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
