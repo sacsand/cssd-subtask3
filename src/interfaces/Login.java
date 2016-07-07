@@ -162,6 +162,7 @@ public class Login extends javax.swing.JFrame {
         Page_Title19 = new javax.swing.JLabel();
         Page_Title21 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        Page_Title47 = new javax.swing.JLabel();
         Page_Title28 = new javax.swing.JLabel();
         Page_Title30 = new javax.swing.JLabel();
         Page_Title31 = new javax.swing.JLabel();
@@ -173,6 +174,7 @@ public class Login extends javax.swing.JFrame {
         Page_Title35 = new javax.swing.JLabel();
         jTextField_mobileAccTopUpCardNo = new javax.swing.JTextField();
         bacground_login3 = new javax.swing.JLabel();
+        Page_Title46 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         ipackage = new javax.swing.JPanel();
@@ -423,14 +425,14 @@ public class Login extends javax.swing.JFrame {
         Page_Title24.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title24.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title24.setForeground(java.awt.Color.white);
-        Page_Title24.setText("Pay Pal");
+        Page_Title24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaces/phdpi.png"))); // NOI18N
         Page_Title24.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Page_Title24MouseClicked(evt);
             }
         });
         ipayment_type.add(Page_Title24);
-        Page_Title24.setBounds(200, 250, 90, 21);
+        Page_Title24.setBounds(210, 350, 90, 50);
 
         white_transparent_panel_title6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
         white_transparent_panel_title6.setText("larasparet");
@@ -445,9 +447,9 @@ public class Login extends javax.swing.JFrame {
         Page_Title25.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title25.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title25.setForeground(java.awt.Color.white);
-        Page_Title25.setText("MasterCard");
+        Page_Title25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/mhdpi.png"))); // NOI18N
         ipayment_type.add(Page_Title25);
-        Page_Title25.setBounds(180, 330, 110, 20);
+        Page_Title25.setBounds(210, 230, 110, 60);
 
         Page_Title26.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title26.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
@@ -466,14 +468,15 @@ public class Login extends javax.swing.JFrame {
         Visa.setBackground(new java.awt.Color(102, 102, 102));
         Visa.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Visa.setForeground(java.awt.Color.white);
-        Visa.setText("           Visa");
+        Visa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/hdpi.png"))); // NOI18N
+        Visa.setText("                ");
         Visa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 VisaMouseClicked(evt);
             }
         });
         ipayment_type.add(Visa);
-        Visa.setBounds(170, 290, 110, 20);
+        Visa.setBounds(210, 290, 70, 50);
 
         Page_Title29.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title29.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
@@ -631,6 +634,13 @@ public class Login extends javax.swing.JFrame {
         ipay.add(jLabel3);
         jLabel3.setBounds(150, 400, 190, 40);
 
+        Page_Title47.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title47.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title47.setForeground(java.awt.Color.white);
+        Page_Title47.setText("back");
+        ipay.add(Page_Title47);
+        Page_Title47.setBounds(110, 500, 110, 17);
+
         Page_Title28.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title28.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title28.setForeground(java.awt.Color.white);
@@ -714,6 +724,13 @@ public class Login extends javax.swing.JFrame {
         bacground_login3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
         ipay.add(bacground_login3);
         bacground_login3.setBounds(-140, -540, 870, 1130);
+
+        Page_Title46.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title46.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title46.setForeground(java.awt.Color.white);
+        Page_Title46.setText("         PIN");
+        ipay.add(Page_Title46);
+        Page_Title46.setBounds(190, 270, 110, 21);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel7.setText("Add");
@@ -1128,6 +1145,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title43;
     private javax.swing.JLabel Page_Title44;
     private javax.swing.JLabel Page_Title45;
+    private javax.swing.JLabel Page_Title46;
+    private javax.swing.JLabel Page_Title47;
     private javax.swing.JLabel Page_Title6;
     private javax.swing.JLabel Page_Title7;
     private javax.swing.JLabel Page_Title8;
