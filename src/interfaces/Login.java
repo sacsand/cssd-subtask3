@@ -176,9 +176,12 @@ public class Login extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         ipackage = new javax.swing.JPanel();
+        Page_Title39 = new javax.swing.JLabel();
+        Page_Title44 = new javax.swing.JLabel();
         jComboBox_packageType = new javax.swing.JComboBox();
         jLabel_packageNext = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        bacground_login5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(450, 100));
@@ -736,24 +739,44 @@ public class Login extends javax.swing.JFrame {
 
         ipackage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Page_Title39.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title39.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title39.setForeground(java.awt.Color.white);
+        Page_Title39.setText("beta 2");
+        ipackage.add(Page_Title39, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, -1, -1));
+
+        Page_Title44.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title44.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
+        Page_Title44.setForeground(java.awt.Color.white);
+        Page_Title44.setText("Lydia");
+        ipackage.add(Page_Title44, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, -1, -1));
+
+        jComboBox_packageType.setForeground(java.awt.Color.white);
         jComboBox_packageType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Day", "Night" }));
         jComboBox_packageType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_packageTypeActionPerformed(evt);
             }
         });
-        ipackage.add(jComboBox_packageType, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 210, -1));
+        ipackage.add(jComboBox_packageType, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 210, -1));
 
+        jLabel_packageNext.setFont(new java.awt.Font("Ubuntu Light", 1, 18)); // NOI18N
+        jLabel_packageNext.setForeground(java.awt.Color.white);
         jLabel_packageNext.setText("Next");
         jLabel_packageNext.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_packageNextMouseClicked(evt);
             }
         });
-        ipackage.add(jLabel_packageNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 120, 50));
+        ipackage.add(jLabel_packageNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 130, 50));
 
+        jLabel8.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        jLabel8.setForeground(java.awt.Color.white);
         jLabel8.setText("choose the package");
-        ipackage.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 120, -1));
+        ipackage.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 180, -1));
+
+        bacground_login5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        ipackage.add(bacground_login5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, -410, 700, -1));
 
         main_panel.add(ipackage, "card7");
 
@@ -1098,10 +1121,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title36;
     private javax.swing.JLabel Page_Title37;
     private javax.swing.JLabel Page_Title38;
+    private javax.swing.JLabel Page_Title39;
     private javax.swing.JLabel Page_Title40;
     private javax.swing.JLabel Page_Title41;
     private javax.swing.JLabel Page_Title42;
     private javax.swing.JLabel Page_Title43;
+    private javax.swing.JLabel Page_Title44;
     private javax.swing.JLabel Page_Title45;
     private javax.swing.JLabel Page_Title6;
     private javax.swing.JLabel Page_Title7;
@@ -1114,6 +1139,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel bacground_login2;
     private javax.swing.JLabel bacground_login3;
     private javax.swing.JLabel bacground_login4;
+    private javax.swing.JLabel bacground_login5;
     private javax.swing.JPanel ipackage;
     private javax.swing.JPanel ipaid;
     private javax.swing.JPanel ipay;
