@@ -46,7 +46,7 @@ public class LogControl implements Serializable{
      public void createCardReaderLog(CardReaderLog log){
         setOfCarReaderLogs.add(log); 
     }
-     public void createCardMobileLog(Log log){
+     public void createMobileLog(Log log){
         setOfMobileLogs.add(log); 
     }
      public void moveToMainLog(Log log){
@@ -65,7 +65,7 @@ public class LogControl implements Serializable{
          for(int i=0;i<setOfCarReaderLogs.size();i++)
             {
                for(CardReaderLog CR: setOfCarReaderLogs )
-                if((CR.getAccountNumber()).equals(CR))
+                if((CR.getAccountNumber()).equals(accountNumber))
                 {
                     return CR;
                 }else
@@ -73,6 +73,36 @@ public class LogControl implements Serializable{
                     return null;
                 }
             }
+        return null;
+     }
+      public TempLog findTempLogByAccountNumber(String accountNumber){
+         TempLog tempLog=null;
+               for(TempLog TL: setOfTempLogs )
+               {
+                    if((TL.getAccountNumber()).equals(accountNumber))
+                    {
+                        tempLog=TL;
+                        return tempLog;
+                    }else
+                    {
+                        return tempLog;
+                    }
+               }
+        return null;
+     }
+       public Log findMobileLogByAccountNumber(String accountNumber){
+         Log mobileLog=null;
+               for(Log ML: setOfMobileLogs )
+               {
+                if((ML.getAccountNumber()).equals(accountNumber))
+                {
+                    mobileLog=ML;
+                    return mobileLog;
+                }else
+                {
+                    return mobileLog;
+                }
+               }
         return null;
      }
      public Log findLogByTime(Time time){
@@ -83,6 +113,18 @@ public class LogControl implements Serializable{
      }
      public Log findLogByRoute(String route){
          return null;
+     }
+     public Vector<Log> getLogsByAccount(String accountNumber){
+         Vector<Log> logs = null;
+         for(Log lg:MainLog)
+         {
+                if((lg.getAccountNumber()).equals(accountNumber))
+                {
+                    logs.add(lg);
+                }
+                
+         }
+        return logs;
      }
     
     public static void serialize() throws IOException{

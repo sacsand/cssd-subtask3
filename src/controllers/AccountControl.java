@@ -47,7 +47,7 @@ public class AccountControl implements Serializable {
      
      
      public static MobileAccount findMobileAccountByAccountNumber(String AccNo){
-           MobileAccount op=null; 
+        MobileAccount mobileAc=null;
                for(MobileAccount MA: setOfMobileAccounts )
                {
                 if((MA.getAccountNumber()).equals(AccNo))
@@ -55,10 +55,10 @@ public class AccountControl implements Serializable {
                     return MA;
                 }else
                 {
-                    op =null;
+                    mobileAc=null;
                 }
                }
-            return op;
+            return mobileAc;
      }
      /**
      * @author ravi
@@ -81,16 +81,18 @@ public class AccountControl implements Serializable {
         return mAcc;
     }
      public static SmartAccount findSmartAccountByAccountNumber(String AccNo){
-            
+        SmartAccount smartAc=null;   
                for(SmartAccount SA: setOfSmartAccounts )
+               {
                 if((SA.getAccountNumber()).equals(AccNo))
                 {
                     return SA;
                 }else
                 {
-                    return null;
+                    smartAc=null;
                 }
-            return null;
+               }
+            return smartAc;
      }
       public static TempAccount findTemptAccountByAccountNumber(String AccNo){
             

@@ -16,7 +16,11 @@ public class SmartCard extends TravelCard implements Serializable{
     
     private boolean authentication;
 
-    public SmartCard(Date expireDate, String pinNumber, String packageType, String acountNumber,boolean authentication) {
+    public SmartCard(Date expireDate, int pinNumber,String acountNumber,boolean authentication) {
+        super(expireDate, pinNumber,acountNumber);
+        this.authentication= authentication;
+    }
+    public SmartCard(Date expireDate, int pinNumber, String packageType, String acountNumber,boolean authentication) {
         super(expireDate, pinNumber, packageType, acountNumber);
         this.authentication= authentication;
     }

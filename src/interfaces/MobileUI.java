@@ -87,7 +87,7 @@ public class MobileUI extends javax.swing.JFrame {
      */
     public static void topUpAccount(double amount) {
         tempMobileAccount = AccountControl.findMobileAccountByAccountNumber(mobibleAccNo);
-        tempMobileAccount.topUp(amount);
+        tempMobileAccount.topUp((float) amount);
         try {
             AccountControl.serialize();
         } catch (IOException ex) {

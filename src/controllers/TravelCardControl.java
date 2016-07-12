@@ -43,32 +43,32 @@ public class TravelCardControl implements Serializable {
         setOfPassiveCards.add(pasivecard);
     }
     public SmartCard findSmartCardByCardNo(String cardNo){
-        for(int i=0;i<setOfSmartCards.size();i++)
-            {
+        SmartCard smartC=null;
                for(SmartCard SC: setOfSmartCards )
-                if((SC.getAcountNumber()).equals(cardNo))
+               {
+                if((SC.getCardId()).equals(cardNo))
                 {
                     return SC;
                 }else
                 {
-                    return null;
+                    smartC=null;
                 }
             }
-        return null;
+        return smartC;
     }
     public PassiveCard findPassiveCarByCardNo(String cardNo){
-        for(int i=0;i<setOfPassiveCards.size();i++)
-            {
+        PassiveCard passiveC=null;
                for(PassiveCard PC: setOfPassiveCards )
+               {
                 if((PC.getAcountNumber()).equals(cardNo))
                 {
                     return PC;
                 }else
                 {
-                    return null;
+                    passiveC=null;
                 }
             }
-        return null;
+        return passiveC;
     }
     public static void serialize() throws IOException {
         Serialization.serialize(setOfPassiveCards, "passiveCards.ser");

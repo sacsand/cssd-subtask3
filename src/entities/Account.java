@@ -16,18 +16,16 @@ import java.util.Date;
  * @author Ravi
  */
 public class Account implements Serializable {
-
-    private String accountNumber;
-    private double amount;
-    private Date createdDate;
-    private Date expireDate;
-    private String packageType;
-    private static int accountCount = 0; //cheetah
-
     
-    //cheetah
-    public Account(Date createdDate) {
-        this.accountNumber = "M" + accountCount;
+   private String accountNumber;
+   private double amount;
+   private Date createdDate;
+   private Date expireDate;
+   private String packageType;
+   private static int accountCount = 0;
+
+   public Account(Date createdDate) {
+        this.accountNumber = "MA" + accountCount;
 
         this.createdDate = createdDate;
         this.expireDate = new Date(createdDate.getTime() + ((24 * 60 * 60 * 1000) * 1000));
@@ -36,7 +34,24 @@ public class Account implements Serializable {
 
     }
 
-    public Account(String accountNumber, double amount, Date createdDate, Date expireDate, String packageType) {
+    //cheetah - for smart account
+
+    public Account(Date createdDate, Date expireDate) {
+        this.createdDate = createdDate;
+        this.expireDate = expireDate;
+        this.accountNumber = "SA" + accountCount;
+        accountCount++; //increment the accountCount
+
+    }
+    //cheetah for temp account
+
+    public Account(Date createdDate, Date expireDate,String area) {
+        this.createdDate = createdDate;
+        this.expireDate = expireDate;
+        this.accountNumber = "TA" + accountCount;
+        accountCount++; //increment the accountCount
+    }
+    public Account(String accountNumber, float amount, Date createdDate, Date expireDate, String packageType) {
         this.accountNumber = accountNumber;
         this.amount = amount;
         this.createdDate = createdDate;
@@ -83,25 +98,30 @@ public class Account implements Serializable {
     public void setPackageType(String packageType) {
         this.packageType = packageType;
     }
-
-    public void changePackage(String packageType) {
+    
+    public void changePackage(String packageType){
         setPackageType(packageType);
     }
-    //cheetah
+   
     private void writeObject(ObjectOutputStream out) throws IOException //to serialize the static variable bookCount
     {
         out.defaultWriteObject();
         out.writeObject(new Integer(accountCount));
     }
+
     //cheeath
+
     private void readObject(ObjectInputStream in) throws ClassNotFoundException, IOException//to deserialize the static variable bookCount
     {
         in.defaultReadObject();
         accountCount = (Integer) in.readObject();
     }
+
     //cheetah
+
     public static int getAccountCount() {
         return accountCount;
     }
-
+    
+    
 }

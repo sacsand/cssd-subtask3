@@ -18,7 +18,12 @@ public class PassiveCard extends TravelCard implements Serializable{
     private boolean direction;
     private String destination;
 
-    public PassiveCard(Date expireDate, String pinNumber, String packageType, String acountNumber,String area,boolean direction,String destination) {
+    public PassiveCard(boolean direction, String destination, Date expireDate, String acountNumber) {
+        super(expireDate, acountNumber);
+        this.direction = direction;
+        this.destination = destination;
+    }
+    public PassiveCard(Date expireDate, int pinNumber, String packageType, String acountNumber,String area,boolean direction,String destination) {
         super(expireDate, pinNumber, packageType, acountNumber);
         
         this.area=area;

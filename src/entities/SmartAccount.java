@@ -16,6 +16,9 @@ public class SmartAccount extends Account implements Serializable{
 
     private String cardId;
 
+    public SmartAccount(Date createdDate, Date expireDate) {
+        super(createdDate, expireDate);
+    }
     public SmartAccount(String accountNumber, float amount, Date createdDate, Date expireDate, String packageType,String cardId) {
         super(accountNumber, amount, createdDate, expireDate, packageType);
         this.cardId=cardId;
@@ -29,7 +32,7 @@ public class SmartAccount extends Account implements Serializable{
         this.cardId = cardId;
     }
 
-    public void topUp(float amount) {
+    public void topUp(double amount) {
         super.setAmount(super.getAmount() + amount);
 
     }

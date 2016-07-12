@@ -370,6 +370,8 @@ public class CardReaderUI1 extends javax.swing.JFrame implements ActionListener 
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
