@@ -310,16 +310,24 @@ public class PayStationUi extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        jLabel81 = new javax.swing.JLabel();
         atm_outer = new javax.swing.JPanel();
         atm_home = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        Page_Title30 = new javax.swing.JLabel();
-        Page_Title5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         Page_Title7 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        Page_Title5 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        Page_Title30 = new javax.swing.JLabel();
         Page_Title6 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
         atm_payment_selct = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
@@ -327,27 +335,33 @@ public class PayStationUi extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel_paystaionPaymentHome = new javax.swing.JLabel();
         jLabel_paystaionPaymentBack = new javax.swing.JLabel();
+        jLabel84 = new javax.swing.JLabel();
+        Page_Title42 = new javax.swing.JLabel();
+        Page_Title32 = new javax.swing.JLabel();
         Page_Title8 = new javax.swing.JLabel();
         Page_Title9 = new javax.swing.JLabel();
         Page_Title10 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        Page_Title32 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel_payStationBack = new javax.swing.JLabel();
         card_selet = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel_paystaionCardSelectHome = new javax.swing.JLabel();
         jLabel_paystaionCardSelectBack = new javax.swing.JLabel();
         Page_Title11 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         Page_Title12 = new javax.swing.JLabel();
         Page_Title14 = new javax.swing.JLabel();
         Page_Title13 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
         Page_Title31 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         card_pay = new javax.swing.JPanel();
@@ -365,8 +379,8 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title17 = new javax.swing.JLabel();
         Page_Title33 = new javax.swing.JLabel();
         Page_Title18 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
         card_paid = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
@@ -415,6 +429,7 @@ public class PayStationUi extends javax.swing.JFrame {
         jLabel_paystationMegaPack = new javax.swing.JLabel();
         Page_Title34 = new javax.swing.JLabel();
         Page_Title36 = new javax.swing.JLabel();
+        Page_Title49 = new javax.swing.JLabel();
         jLabel_paystationBudjectPack = new javax.swing.JLabel();
         jLabel_paystationNightPack = new javax.swing.JLabel();
         Page_Title35 = new javax.swing.JLabel();
@@ -426,11 +441,16 @@ public class PayStationUi extends javax.swing.JFrame {
         jPanel_selectSmartCradOptions = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLable_newSmartCard = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLable_smartCardTopUp = new javax.swing.JLabel();
+        Page_Title41 = new javax.swing.JLabel();
         jLabel_paystaionSmartCardOptionHome = new javax.swing.JLabel();
         jLabel_paystaionSmartCardOptionBack = new javax.swing.JLabel();
         Page_Title40 = new javax.swing.JLabel();
-        jLable_smartCardTopUp = new javax.swing.JLabel();
-        jLable_newSmartCard = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
         Page_Title43 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
@@ -442,6 +462,7 @@ public class PayStationUi extends javax.swing.JFrame {
         paystaionCardIdInput = new javax.swing.JTextField();
         paystaionCardPinTopUp = new javax.swing.JLabel();
         paystaionCardPinTopUp1 = new javax.swing.JTextField();
+        paystaionCardId5 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         paystaionCardIdEnter = new javax.swing.JLabel();
@@ -481,7 +502,6 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title44 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         Page_Title45 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
         jLabel_payStationBack1 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
         passiveCardPaid = new javax.swing.JPanel();
@@ -506,8 +526,13 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title58 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
 
+        jButton1.setText("jButton1");
+
+        jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/blue60-1610_600.png"))); // NOI18N
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(629, 390));
+        setLocation(new java.awt.Point(100, 100));
+        setMinimumSize(new java.awt.Dimension(775, 500));
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(null);
@@ -516,31 +541,7 @@ public class PayStationUi extends javax.swing.JFrame {
 
         atm_home.setLayout(null);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel2.setText("Add");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
-        atm_home.add(jLabel2);
-        jLabel2.setBounds(90, 230, 460, 60);
-
-        Page_Title30.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title30.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
-        Page_Title30.setForeground(java.awt.Color.white);
-        Page_Title30.setText("Select a option");
-        atm_home.add(Page_Title30);
-        Page_Title30.setBounds(50, 90, 170, 30);
-
-        Page_Title5.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title5.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
-        Page_Title5.setForeground(java.awt.Color.white);
-        Page_Title5.setText("Get Tickets");
-        atm_home.add(Page_Title5);
-        Page_Title5.setBounds(270, 230, 170, 60);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/43aspect.png"))); // NOI18N
         jLabel3.setText("Add");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -548,35 +549,91 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         atm_home.add(jLabel3);
-        jLabel3.setBounds(90, 150, 460, 60);
+        jLabel3.setBounds(430, 170, 320, 170);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/43aspect.png"))); // NOI18N
+        jLabel2.setText("Add");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        atm_home.add(jLabel2);
+        jLabel2.setBounds(50, 170, 320, 170);
 
         Page_Title7.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title7.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title7.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title7.setForeground(java.awt.Color.white);
-        Page_Title7.setText("Get Smart Card");
+        Page_Title7.setText("Get A Smart Card");
         atm_home.add(Page_Title7);
-        Page_Title7.setBounds(250, 150, 170, 60);
+        Page_Title7.setBounds(500, 290, 200, 60);
+
+        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-72@2x.png"))); // NOI18N
+        atm_home.add(jLabel72);
+        jLabel72.setBounds(520, 180, 150, 120);
+
+        Page_Title5.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title5.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
+        Page_Title5.setForeground(java.awt.Color.white);
+        Page_Title5.setText("Get Tickets");
+        atm_home.add(Page_Title5);
+        Page_Title5.setBounds(160, 300, 170, 50);
+
+        jLabel73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-76@2x.png"))); // NOI18N
+        atm_home.add(jLabel73);
+        jLabel73.setBounds(140, 180, 170, 140);
+
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/background_semi_transparent-1.png"))); // NOI18N
+        jLabel74.setText("Add");
+        jLabel74.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel74MouseClicked(evt);
+            }
+        });
+        atm_home.add(jLabel74);
+        jLabel74.setBounds(430, 170, 320, 170);
+
+        jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/background_semi_transparent-1.png"))); // NOI18N
+        jLabel70.setText("jLabel70");
+        atm_home.add(jLabel70);
+        jLabel70.setBounds(50, 170, 320, 170);
+
+        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaces/White_Background.jpg"))); // NOI18N
+        jLabel69.setText("jLabel69");
+        atm_home.add(jLabel69);
+        jLabel69.setBounds(400, 520, 460, 10);
+
+        Page_Title30.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title30.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
+        Page_Title30.setForeground(java.awt.Color.white);
+        Page_Title30.setText("Select An Option");
+        atm_home.add(Page_Title30);
+        Page_Title30.setBounds(210, 80, 330, 70);
 
         Page_Title6.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title6.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
         Page_Title6.setForeground(java.awt.Color.white);
-        Page_Title6.setText("Lydia ATM ");
+        Page_Title6.setText("Lydia  ATM ");
         atm_home.add(Page_Title6);
         Page_Title6.setBounds(20, 0, 260, 60);
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel26.setText("Add");
         jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel26MouseClicked(evt);
             }
         });
         atm_home.add(jLabel26);
-        jLabel26.setBounds(0, 0, 630, 60);
+        jLabel26.setBounds(0, 0, 820, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         atm_home.add(jLabel1);
-        jLabel1.setBounds(-10, -700, 695, 1290);
+        jLabel1.setBounds(-290, -170, 1810, 1600);
+
+        jLabel71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Blue_Gradient_Transparent_Page_Background.jpg"))); // NOI18N
+        jLabel71.setText("jLabel70");
+        atm_home.add(jLabel71);
+        jLabel71.setBounds(30, 370, 320, 60);
 
         atm_outer.add(atm_home, "card2");
 
@@ -584,11 +641,11 @@ public class PayStationUi extends javax.swing.JFrame {
 
         jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/cardIcon-Smalcal-50.png"))); // NOI18N
         atm_payment_selct.add(jLabel58);
-        jLabel58.setBounds(100, 130, 113, 70);
+        jLabel58.setBounds(220, 170, 60, 70);
 
         jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-Small-50.png"))); // NOI18N
         atm_payment_selct.add(jLabel57);
-        jLabel57.setBounds(100, 200, 70, 90);
+        jLabel57.setBounds(220, 300, 70, 90);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel4.setText("Add");
@@ -598,7 +655,7 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         atm_payment_selct.add(jLabel4);
-        jLabel4.setBounds(90, 210, 460, 70);
+        jLabel4.setBounds(190, 300, 450, 100);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel5.setText("Add");
@@ -608,16 +665,16 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         atm_payment_selct.add(jLabel5);
-        jLabel5.setBounds(90, 130, 460, 70);
+        jLabel5.setBounds(190, 160, 450, 100);
 
-        jLabel_paystaionPaymentHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
+        jLabel_paystaionPaymentHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/smalllogo.png"))); // NOI18N
         jLabel_paystaionPaymentHome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_paystaionPaymentHomeMouseClicked(evt);
             }
         });
         atm_payment_selct.add(jLabel_paystaionPaymentHome);
-        jLabel_paystaionPaymentHome.setBounds(580, 10, 40, 30);
+        jLabel_paystaionPaymentHome.setBounds(730, 10, 40, 30);
 
         jLabel_paystaionPaymentBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/small_gree.png"))); // NOI18N
         jLabel_paystaionPaymentBack.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -626,21 +683,40 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         atm_payment_selct.add(jLabel_paystaionPaymentBack);
-        jLabel_paystaionPaymentBack.setBounds(530, 10, 40, 30);
+        jLabel_paystaionPaymentBack.setBounds(690, 10, 40, 30);
+
+        jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/TransparentBlueLayerSlide_1600x1600.png"))); // NOI18N
+        jLabel84.setText("jLabel14");
+        atm_payment_selct.add(jLabel84);
+        jLabel84.setBounds(190, 300, 110, 100);
+
+        Page_Title42.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title42.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title42.setForeground(java.awt.Color.white);
+        Page_Title42.setText("Home/");
+        atm_payment_selct.add(Page_Title42);
+        Page_Title42.setBounds(420, 40, 350, 20);
+
+        Page_Title32.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title32.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
+        Page_Title32.setForeground(java.awt.Color.white);
+        Page_Title32.setText("Select a option");
+        atm_payment_selct.add(Page_Title32);
+        Page_Title32.setBounds(80, 80, 350, 40);
 
         Page_Title8.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title8.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title8.setFont(new java.awt.Font("Ubuntu Light", 0, 28)); // NOI18N
         Page_Title8.setForeground(java.awt.Color.white);
         Page_Title8.setText("Pay by Cash");
         atm_payment_selct.add(Page_Title8);
-        Page_Title8.setBounds(270, 220, 170, 50);
+        Page_Title8.setBounds(380, 320, 170, 50);
 
         Page_Title9.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title9.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title9.setFont(new java.awt.Font("Ubuntu Light", 0, 28)); // NOI18N
         Page_Title9.setForeground(java.awt.Color.white);
         Page_Title9.setText("Pay by Card");
         atm_payment_selct.add(Page_Title9);
-        Page_Title9.setBounds(270, 150, 170, 30);
+        Page_Title9.setBounds(380, 190, 170, 30);
 
         Page_Title10.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title10.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -649,26 +725,23 @@ public class PayStationUi extends javax.swing.JFrame {
         atm_payment_selct.add(Page_Title10);
         Page_Title10.setBounds(20, 0, 260, 60);
 
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/TransparentBlueLayerSlide_1600x1600.png"))); // NOI18N
+        jLabel14.setText("jLabel14");
+        atm_payment_selct.add(jLabel14);
+        jLabel14.setBounds(190, 160, 110, 100);
+
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel25.setText("Add");
         jLabel25.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel25MouseClicked(evt);
             }
         });
         atm_payment_selct.add(jLabel25);
-        jLabel25.setBounds(0, 0, 630, 60);
+        jLabel25.setBounds(0, 0, 860, 60);
 
-        Page_Title32.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title32.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
-        Page_Title32.setForeground(java.awt.Color.white);
-        Page_Title32.setText("Select a option");
-        atm_payment_selct.add(Page_Title32);
-        Page_Title32.setBounds(50, 90, 170, 30);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         atm_payment_selct.add(jLabel6);
-        jLabel6.setBounds(-10, -700, 695, 1290);
+        jLabel6.setBounds(-320, -50, 1250, 1290);
 
         jLabel_payStationBack.setText("Back");
         atm_payment_selct.add(jLabel_payStationBack);
@@ -678,18 +751,6 @@ public class PayStationUi extends javax.swing.JFrame {
 
         card_selet.setLayout(null);
 
-        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/hdpi.png"))); // NOI18N
-        card_selet.add(jLabel59);
-        jLabel59.setBounds(110, 200, 70, 50);
-
-        jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/phdpi.png"))); // NOI18N
-        card_selet.add(jLabel61);
-        jLabel61.setBounds(110, 130, 90, 70);
-
-        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/mhdpi.png"))); // NOI18N
-        card_selet.add(jLabel60);
-        jLabel60.setBounds(110, 250, 70, 70);
-
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel10.setText("Add");
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -698,42 +759,7 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         card_selet.add(jLabel10);
-        jLabel10.setBounds(90, 140, 460, 50);
-
-        jLabel_paystaionCardSelectHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
-        jLabel_paystaionCardSelectHome.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_paystaionCardSelectHomeMouseClicked(evt);
-            }
-        });
-        card_selet.add(jLabel_paystaionCardSelectHome);
-        jLabel_paystaionCardSelectHome.setBounds(580, 10, 30, 30);
-
-        jLabel_paystaionCardSelectBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/small_gree.png"))); // NOI18N
-        jLabel_paystaionCardSelectBack.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_paystaionCardSelectBackMouseClicked(evt);
-            }
-        });
-        card_selet.add(jLabel_paystaionCardSelectBack);
-        jLabel_paystaionCardSelectBack.setBounds(530, 10, 40, 30);
-
-        Page_Title11.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title11.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
-        Page_Title11.setForeground(java.awt.Color.white);
-        Page_Title11.setText("PayPal");
-        card_selet.add(Page_Title11);
-        Page_Title11.setBounds(290, 150, 170, 30);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel7.setText("Add");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
-        card_selet.add(jLabel7);
-        jLabel7.setBounds(90, 260, 460, 50);
+        jLabel10.setBounds(180, 120, 450, 70);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel8.setText("Add");
@@ -743,21 +769,68 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         card_selet.add(jLabel8);
-        jLabel8.setBounds(90, 200, 460, 50);
+        jLabel8.setBounds(180, 220, 450, 70);
+
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/hdpi.png"))); // NOI18N
+        card_selet.add(jLabel59);
+        jLabel59.setBounds(200, 230, 70, 50);
+
+        jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/phdpi.png"))); // NOI18N
+        card_selet.add(jLabel61);
+        jLabel61.setBounds(200, 120, 90, 70);
+
+        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/mhdpi.png"))); // NOI18N
+        card_selet.add(jLabel60);
+        jLabel60.setBounds(200, 320, 70, 70);
+
+        jLabel_paystaionCardSelectHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/smalllogo.png"))); // NOI18N
+        jLabel_paystaionCardSelectHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_paystaionCardSelectHomeMouseClicked(evt);
+            }
+        });
+        card_selet.add(jLabel_paystaionCardSelectHome);
+        jLabel_paystaionCardSelectHome.setBounds(730, 10, 30, 30);
+
+        jLabel_paystaionCardSelectBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/small_gree.png"))); // NOI18N
+        jLabel_paystaionCardSelectBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_paystaionCardSelectBackMouseClicked(evt);
+            }
+        });
+        card_selet.add(jLabel_paystaionCardSelectBack);
+        jLabel_paystaionCardSelectBack.setBounds(690, 10, 40, 30);
+
+        Page_Title11.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title11.setFont(new java.awt.Font("Ubuntu Light", 0, 29)); // NOI18N
+        Page_Title11.setForeground(java.awt.Color.white);
+        Page_Title11.setText("PayPal");
+        card_selet.add(Page_Title11);
+        Page_Title11.setBounds(400, 140, 170, 30);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel7.setText("Add");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        card_selet.add(jLabel7);
+        jLabel7.setBounds(180, 320, 450, 70);
 
         Page_Title12.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 0, 29)); // NOI18N
         Page_Title12.setForeground(java.awt.Color.white);
         Page_Title12.setText("Visa");
         card_selet.add(Page_Title12);
-        Page_Title12.setBounds(300, 210, 170, 30);
+        Page_Title12.setBounds(410, 230, 170, 50);
 
         Page_Title14.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title14.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        Page_Title14.setFont(new java.awt.Font("Ubuntu Light", 0, 29)); // NOI18N
         Page_Title14.setForeground(java.awt.Color.white);
         Page_Title14.setText("Master Card");
         card_selet.add(Page_Title14);
-        Page_Title14.setBounds(270, 270, 170, 30);
+        Page_Title14.setBounds(390, 340, 170, 30);
 
         Page_Title13.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title13.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -765,6 +838,10 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title13.setText("Lydia ATM");
         card_selet.add(Page_Title13);
         Page_Title13.setBounds(20, 0, 360, 60);
+
+        jLabel79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/blue60-1610_600.png"))); // NOI18N
+        card_selet.add(jLabel79);
+        jLabel79.setBounds(180, 220, 120, 70);
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel24.setText("Add");
@@ -774,18 +851,26 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         card_selet.add(jLabel24);
-        jLabel24.setBounds(0, 0, 630, 60);
+        jLabel24.setBounds(0, 0, 780, 60);
+
+        jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/blue60-1610_600.png"))); // NOI18N
+        card_selet.add(jLabel82);
+        jLabel82.setBounds(180, 320, 120, 70);
+
+        jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/blue60-1610_600.png"))); // NOI18N
+        card_selet.add(jLabel80);
+        jLabel80.setBounds(180, 120, 120, 70);
 
         Page_Title31.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title31.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
+        Page_Title31.setFont(new java.awt.Font("Ubuntu Light", 0, 28)); // NOI18N
         Page_Title31.setForeground(java.awt.Color.white);
-        Page_Title31.setText("Select a payment method");
+        Page_Title31.setText("Select A Payment Method");
         card_selet.add(Page_Title31);
-        Page_Title31.setBounds(50, 90, 290, 30);
+        Page_Title31.setBounds(80, 70, 390, 30);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         card_selet.add(jLabel9);
-        jLabel9.setBounds(-10, -700, 695, 1136);
+        jLabel9.setBounds(-330, -30, 1160, 1240);
 
         atm_outer.add(card_selet, "card2");
 
@@ -903,25 +988,23 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title18.setText("Lydia ATM");
         card_pay.add(Page_Title18);
         Page_Title18.setBounds(20, 0, 360, 60);
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
-        card_pay.add(jLabel14);
-        jLabel14.setBounds(-10, -700, 695, 1136);
         card_pay.add(jLabel17);
         jLabel17.setBounds(280, 130, 200, 30);
+        card_pay.add(jLabel83);
+        jLabel83.setBounds(-10, -15, 750, 520);
 
         atm_outer.add(card_pay, "card2");
 
         card_paid.setLayout(null);
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/smalllogo.png"))); // NOI18N
         jLabel20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel20MouseClicked(evt);
             }
         });
         card_paid.add(jLabel20);
-        jLabel20.setBounds(590, 20, 40, 30);
+        jLabel20.setBounds(730, 10, 40, 30);
 
         jLabel65.setFont(new java.awt.Font("Ubuntu Light", 1, 24)); // NOI18N
         jLabel65.setForeground(java.awt.Color.white);
@@ -944,7 +1027,7 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title20.setForeground(java.awt.Color.white);
         Page_Title20.setText("Payment Recived");
         card_paid.add(Page_Title20);
-        Page_Title20.setBounds(180, 90, 240, 30);
+        Page_Title20.setBounds(270, 90, 240, 30);
 
         jLabel_paystationSmartAccNum.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         jLabel_paystationSmartAccNum.setForeground(new java.awt.Color(255, 255, 255));
@@ -1020,9 +1103,9 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         card_paid.add(jLabel15);
-        jLabel15.setBounds(0, 0, 630, 60);
+        jLabel15.setBounds(0, 0, 780, 60);
         card_paid.add(jLabel19);
-        jLabel19.setBounds(280, 130, 200, 30);
+        jLabel19.setBounds(210, 130, 200, 30);
 
         Page_Title22.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title22.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
@@ -1036,7 +1119,7 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title23.setForeground(java.awt.Color.white);
         Page_Title23.setText("Thank You");
         card_paid.add(Page_Title23);
-        Page_Title23.setBounds(50, 90, 130, 30);
+        Page_Title23.setBounds(140, 90, 130, 30);
 
         Page_Title24.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title24.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -1050,11 +1133,11 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title25.setForeground(java.awt.Color.white);
         Page_Title25.setText("Don't Forget to Collect your card");
         card_paid.add(Page_Title25);
-        Page_Title25.setBounds(110, 120, 370, 30);
+        Page_Title25.setBounds(250, 120, 370, 30);
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         card_paid.add(jLabel21);
-        jLabel21.setBounds(-10, -700, 695, 1136);
+        jLabel21.setBounds(-320, -150, 1210, 1490);
 
         jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel62.setText("Add");
@@ -1200,16 +1283,16 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title39.setForeground(java.awt.Color.white);
         Page_Title39.setText("Mega package");
         select_package.add(Page_Title39);
-        Page_Title39.setBounds(320, 270, 170, 30);
+        Page_Title39.setBounds(460, 310, 170, 30);
 
-        jLabel_paystaionPackageHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
+        jLabel_paystaionPackageHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/smalllogo.png"))); // NOI18N
         jLabel_paystaionPackageHome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_paystaionPackageHomeMouseClicked(evt);
             }
         });
         select_package.add(jLabel_paystaionPackageHome);
-        jLabel_paystaionPackageHome.setBounds(590, 10, 30, 30);
+        jLabel_paystaionPackageHome.setBounds(730, 10, 30, 30);
 
         jLabel_paystaionPackageBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/small_gree.png"))); // NOI18N
         jLabel_paystaionPackageBack.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1218,9 +1301,9 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         select_package.add(jLabel_paystaionPackageBack);
-        jLabel_paystaionPackageBack.setBounds(550, 10, 30, 30);
+        jLabel_paystaionPackageBack.setBounds(690, 10, 30, 30);
 
-        jLabel_paystationMegaPack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel_paystationMegaPack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/background_semi_transparent-1.png"))); // NOI18N
         jLabel_paystationMegaPack.setText("Add");
         jLabel_paystationMegaPack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1228,23 +1311,30 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         select_package.add(jLabel_paystationMegaPack);
-        jLabel_paystationMegaPack.setBounds(310, 260, 210, 100);
+        jLabel_paystationMegaPack.setBounds(450, 310, 250, 120);
 
         Page_Title34.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title34.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title34.setForeground(java.awt.Color.white);
         Page_Title34.setText("Night Package");
         select_package.add(Page_Title34);
-        Page_Title34.setBounds(60, 150, 170, 30);
+        Page_Title34.setBounds(150, 140, 170, 30);
 
         Page_Title36.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title36.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title36.setForeground(java.awt.Color.white);
         Page_Title36.setText("Budject Package");
         select_package.add(Page_Title36);
-        Page_Title36.setBounds(60, 270, 170, 30);
+        Page_Title36.setBounds(140, 310, 170, 30);
 
-        jLabel_paystationBudjectPack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        Page_Title49.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title49.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title49.setForeground(java.awt.Color.white);
+        Page_Title49.setText("Home/");
+        select_package.add(Page_Title49);
+        Page_Title49.setBounds(540, 30, 370, 30);
+
+        jLabel_paystationBudjectPack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/background_semi_transparent-1.png"))); // NOI18N
         jLabel_paystationBudjectPack.setText("Add");
         jLabel_paystationBudjectPack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1255,9 +1345,9 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         select_package.add(jLabel_paystationBudjectPack);
-        jLabel_paystationBudjectPack.setBounds(50, 260, 220, 100);
+        jLabel_paystationBudjectPack.setBounds(140, 310, 240, 120);
 
-        jLabel_paystationNightPack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel_paystationNightPack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/background_semi_transparent-1.png"))); // NOI18N
         jLabel_paystationNightPack.setText("Add");
         jLabel_paystationNightPack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1265,14 +1355,14 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         select_package.add(jLabel_paystationNightPack);
-        jLabel_paystationNightPack.setBounds(50, 140, 220, 100);
+        jLabel_paystationNightPack.setBounds(140, 140, 240, 120);
 
         Page_Title35.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title35.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title35.setForeground(java.awt.Color.white);
         Page_Title35.setText("Day Package");
         select_package.add(Page_Title35);
-        Page_Title35.setBounds(320, 150, 170, 30);
+        Page_Title35.setBounds(460, 140, 170, 30);
 
         Page_Title37.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title37.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -1282,16 +1372,15 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title37.setBounds(20, 0, 360, 60);
 
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel34.setText("Add");
         jLabel34.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel34MouseClicked(evt);
             }
         });
         select_package.add(jLabel34);
-        jLabel34.setBounds(0, 0, 630, 60);
+        jLabel34.setBounds(-10, 0, 820, 60);
 
-        jLabel_paystationDayPack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel_paystationDayPack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/background_semi_transparent-1.png"))); // NOI18N
         jLabel_paystationDayPack.setText("Add");
         jLabel_paystationDayPack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1299,24 +1388,24 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         select_package.add(jLabel_paystationDayPack);
-        jLabel_paystationDayPack.setBounds(310, 140, 210, 100);
+        jLabel_paystationDayPack.setBounds(450, 140, 250, 120);
 
         Page_Title38.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title38.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title38.setForeground(java.awt.Color.white);
         Page_Title38.setText("Select a package for smart card");
         select_package.add(Page_Title38);
-        Page_Title38.setBounds(50, 90, 370, 30);
+        Page_Title38.setBounds(230, 80, 370, 30);
 
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         select_package.add(jLabel35);
-        jLabel35.setBounds(-10, -700, 695, 1136);
+        jLabel35.setBounds(-290, -70, 1090, 1330);
 
         atm_outer.add(select_package, "card2");
 
         jPanel_selectSmartCradOptions.setLayout(null);
 
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/43aspect.png"))); // NOI18N
         jLabel37.setText("Add");
         jLabel37.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1324,25 +1413,68 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         jPanel_selectSmartCradOptions.add(jLabel37);
-        jLabel37.setBounds(70, 160, 460, 60);
+        jLabel37.setBounds(100, 190, 260, 160);
 
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/43aspect.png"))); // NOI18N
         jLabel38.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel38MouseClicked(evt);
             }
         });
         jPanel_selectSmartCradOptions.add(jLabel38);
-        jLabel38.setBounds(70, 240, 460, 60);
+        jLabel38.setBounds(440, 190, 260, 160);
 
-        jLabel_paystaionSmartCardOptionHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
+        jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/basic2-081_new_badge-128.png"))); // NOI18N
+        jPanel_selectSmartCradOptions.add(jLabel75);
+        jLabel75.setBounds(150, 220, 130, 120);
+
+        jLable_newSmartCard.setBackground(new java.awt.Color(102, 102, 102));
+        jLable_newSmartCard.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
+        jLable_newSmartCard.setForeground(java.awt.Color.white);
+        jLable_newSmartCard.setText("Get A New Smart Card");
+        jLable_newSmartCard.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLable_newSmartCardMouseClicked(evt);
+            }
+        });
+        jPanel_selectSmartCradOptions.add(jLable_newSmartCard);
+        jLable_newSmartCard.setBounds(110, 190, 260, 30);
+
+        jLabel77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/ntbg.png"))); // NOI18N
+        jLabel77.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel77MouseClicked(evt);
+            }
+        });
+        jPanel_selectSmartCradOptions.add(jLabel77);
+        jLabel77.setBounds(100, 190, 290, 160);
+
+        jLabel76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/topUobig.png"))); // NOI18N
+        jPanel_selectSmartCradOptions.add(jLabel76);
+        jLabel76.setBounds(490, 220, 215, 120);
+
+        jLable_smartCardTopUp.setBackground(new java.awt.Color(102, 102, 102));
+        jLable_smartCardTopUp.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
+        jLable_smartCardTopUp.setForeground(java.awt.Color.white);
+        jLable_smartCardTopUp.setText(" Top Up Your Account");
+        jPanel_selectSmartCradOptions.add(jLable_smartCardTopUp);
+        jLable_smartCardTopUp.setBounds(450, 190, 260, 30);
+
+        Page_Title41.setBackground(new java.awt.Color(102, 102, 102));
+        Page_Title41.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        Page_Title41.setForeground(java.awt.Color.white);
+        Page_Title41.setText("Home/GetSmartCard/");
+        jPanel_selectSmartCradOptions.add(Page_Title41);
+        Page_Title41.setBounds(640, 40, 250, 20);
+
+        jLabel_paystaionSmartCardOptionHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/smalllogo.png"))); // NOI18N
         jLabel_paystaionSmartCardOptionHome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_paystaionSmartCardOptionHomeMouseClicked(evt);
             }
         });
         jPanel_selectSmartCradOptions.add(jLabel_paystaionSmartCardOptionHome);
-        jLabel_paystaionSmartCardOptionHome.setBounds(590, 10, 40, 30);
+        jLabel_paystaionSmartCardOptionHome.setBounds(720, 10, 40, 30);
 
         jLabel_paystaionSmartCardOptionBack.setFont(new java.awt.Font("Ubuntu Light", 0, 12)); // NOI18N
         jLabel_paystaionSmartCardOptionBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/small_gree.png"))); // NOI18N
@@ -1352,33 +1484,23 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         jPanel_selectSmartCradOptions.add(jLabel_paystaionSmartCardOptionBack);
-        jLabel_paystaionSmartCardOptionBack.setBounds(550, 10, 30, 30);
+        jLabel_paystaionSmartCardOptionBack.setBounds(680, 10, 30, 30);
 
         Page_Title40.setBackground(new java.awt.Color(102, 102, 102));
-        Page_Title40.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
+        Page_Title40.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
         Page_Title40.setForeground(java.awt.Color.white);
-        Page_Title40.setText("Select a option");
+        Page_Title40.setText("What Do You Need ?");
         jPanel_selectSmartCradOptions.add(Page_Title40);
-        Page_Title40.setBounds(50, 90, 170, 30);
+        Page_Title40.setBounds(60, 110, 370, 30);
 
-        jLable_smartCardTopUp.setBackground(new java.awt.Color(102, 102, 102));
-        jLable_smartCardTopUp.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
-        jLable_smartCardTopUp.setForeground(java.awt.Color.white);
-        jLable_smartCardTopUp.setText("                                      Top-Up");
-        jPanel_selectSmartCradOptions.add(jLable_smartCardTopUp);
-        jLable_smartCardTopUp.setBounds(100, 260, 230, 30);
-
-        jLable_newSmartCard.setBackground(new java.awt.Color(102, 102, 102));
-        jLable_newSmartCard.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
-        jLable_newSmartCard.setForeground(java.awt.Color.white);
-        jLable_newSmartCard.setText("                                 New Smart Card");
-        jLable_newSmartCard.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/ntbg.png"))); // NOI18N
+        jLabel78.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLable_newSmartCardMouseClicked(evt);
+                jLabel78MouseClicked(evt);
             }
         });
-        jPanel_selectSmartCradOptions.add(jLable_newSmartCard);
-        jLable_newSmartCard.setBounds(100, 170, 460, 30);
+        jPanel_selectSmartCradOptions.add(jLabel78);
+        jLabel78.setBounds(440, 190, 260, 160);
 
         Page_Title43.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title43.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -1395,38 +1517,38 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         jPanel_selectSmartCradOptions.add(jLabel39);
-        jLabel39.setBounds(0, 0, 630, 60);
+        jLabel39.setBounds(0, 0, 790, 60);
 
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         jPanel_selectSmartCradOptions.add(jLabel40);
-        jLabel40.setBounds(-10, -700, 695, 1200);
+        jLabel40.setBounds(-320, -150, 1120, 1500);
 
         atm_outer.add(jPanel_selectSmartCradOptions, "card2");
 
         enterCardId.setLayout(null);
 
         paystaionCardIdInvalid.setBackground(new java.awt.Color(102, 102, 102));
-        paystaionCardIdInvalid.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
-        paystaionCardIdInvalid.setForeground(java.awt.Color.white);
+        paystaionCardIdInvalid.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        paystaionCardIdInvalid.setForeground(new java.awt.Color(255, 51, 51));
         paystaionCardIdInvalid.setText("Invalid credentials. Try again!");
         enterCardId.add(paystaionCardIdInvalid);
-        paystaionCardIdInvalid.setBounds(220, 200, 210, 50);
+        paystaionCardIdInvalid.setBounds(280, 280, 240, 50);
 
         paystaionCardId2.setBackground(new java.awt.Color(102, 102, 102));
-        paystaionCardId2.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
+        paystaionCardId2.setFont(new java.awt.Font("Ubuntu Light", 0, 28)); // NOI18N
         paystaionCardId2.setForeground(java.awt.Color.white);
-        paystaionCardId2.setText("Enter your Card ID");
+        paystaionCardId2.setText("Enter your Card ID & Pin Number");
         enterCardId.add(paystaionCardId2);
-        paystaionCardId2.setBounds(50, 90, 220, 30);
+        paystaionCardId2.setBounds(200, 70, 420, 30);
 
-        jLabel_paystaionCardPayHome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
+        jLabel_paystaionCardPayHome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/smalllogo.png"))); // NOI18N
         jLabel_paystaionCardPayHome1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_paystaionCardPayHome1MouseClicked(evt);
             }
         });
         enterCardId.add(jLabel_paystaionCardPayHome1);
-        jLabel_paystaionCardPayHome1.setBounds(560, 10, 40, 30);
+        jLabel_paystaionCardPayHome1.setBounds(730, 10, 40, 30);
 
         jLabel_paystaionCardPayBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/small_gree.png"))); // NOI18N
         jLabel_paystaionCardPayBack1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1435,7 +1557,7 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         enterCardId.add(jLabel_paystaionCardPayBack1);
-        jLabel_paystaionCardPayBack1.setBounds(520, 10, 30, 30);
+        jLabel_paystaionCardPayBack1.setBounds(690, 10, 30, 30);
 
         paystaionCardIdInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1443,14 +1565,14 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         enterCardId.add(paystaionCardIdInput);
-        paystaionCardIdInput.setBounds(210, 140, 240, 30);
+        paystaionCardIdInput.setBounds(270, 160, 240, 40);
 
         paystaionCardPinTopUp.setBackground(new java.awt.Color(102, 102, 102));
-        paystaionCardPinTopUp.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        paystaionCardPinTopUp.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         paystaionCardPinTopUp.setForeground(java.awt.Color.white);
         paystaionCardPinTopUp.setText("PIN");
         enterCardId.add(paystaionCardPinTopUp);
-        paystaionCardPinTopUp.setBounds(100, 180, 100, 21);
+        paystaionCardPinTopUp.setBounds(370, 210, 40, 21);
 
         paystaionCardPinTopUp1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1458,7 +1580,14 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         enterCardId.add(paystaionCardPinTopUp1);
-        paystaionCardPinTopUp1.setBounds(210, 180, 240, 30);
+        paystaionCardPinTopUp1.setBounds(270, 240, 240, 40);
+
+        paystaionCardId5.setBackground(new java.awt.Color(102, 102, 102));
+        paystaionCardId5.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
+        paystaionCardId5.setForeground(java.awt.Color.white);
+        paystaionCardId5.setText("Home/GetSmartCard/New/Confirm/");
+        enterCardId.add(paystaionCardId5);
+        paystaionCardId5.setBounds(550, 30, 230, 40);
 
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel32.setText("Add");
@@ -1468,9 +1597,9 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         enterCardId.add(jLabel32);
-        jLabel32.setBounds(0, 0, 630, 60);
+        jLabel32.setBounds(0, 0, 790, 60);
         enterCardId.add(jLabel33);
-        jLabel33.setBounds(280, 130, 200, 30);
+        jLabel33.setBounds(260, 190, 200, 30);
 
         paystaionCardIdEnter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         paystaionCardIdEnter.setText("Add");
@@ -1480,21 +1609,21 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         enterCardId.add(paystaionCardIdEnter);
-        paystaionCardIdEnter.setBounds(210, 270, 240, 50);
+        paystaionCardIdEnter.setBounds(190, 340, 360, 50);
 
         paystaionCardIdEnterText.setBackground(new java.awt.Color(102, 102, 102));
-        paystaionCardIdEnterText.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        paystaionCardIdEnterText.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         paystaionCardIdEnterText.setForeground(java.awt.Color.white);
-        paystaionCardIdEnterText.setText("Enter ");
+        paystaionCardIdEnterText.setText("Submit");
         enterCardId.add(paystaionCardIdEnterText);
-        paystaionCardIdEnterText.setBounds(310, 280, 60, 30);
+        paystaionCardIdEnterText.setBounds(340, 350, 180, 30);
 
         paystaionCardId.setBackground(new java.awt.Color(102, 102, 102));
-        paystaionCardId.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
+        paystaionCardId.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         paystaionCardId.setForeground(java.awt.Color.white);
         paystaionCardId.setText("Card ID");
         enterCardId.add(paystaionCardId);
-        paystaionCardId.setBounds(100, 140, 100, 21);
+        paystaionCardId.setBounds(350, 120, 100, 28);
 
         Page_Title47.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title47.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -1503,9 +1632,9 @@ public class PayStationUi extends javax.swing.JFrame {
         enterCardId.add(Page_Title47);
         Page_Title47.setBounds(20, 0, 360, 60);
 
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         enterCardId.add(jLabel41);
-        jLabel41.setBounds(-10, -700, 695, 1136);
+        jLabel41.setBounds(-330, -10, 1150, 1210);
         enterCardId.add(jLabel42);
         jLabel42.setBounds(280, 130, 200, 30);
 
@@ -1667,14 +1796,14 @@ public class PayStationUi extends javax.swing.JFrame {
         paystationPassiveCardNormal.add(passiveCardDestination);
         passiveCardDestination.setBounds(60, 230, 150, 25);
 
-        jLabel_paystaionPaymentHome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
+        jLabel_paystaionPaymentHome1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/smalllogo.png"))); // NOI18N
         jLabel_paystaionPaymentHome1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel_paystaionPaymentHome1MouseClicked(evt);
             }
         });
         paystationPassiveCardNormal.add(jLabel_paystaionPaymentHome1);
-        jLabel_paystaionPaymentHome1.setBounds(590, 10, 40, 30);
+        jLabel_paystaionPaymentHome1.setBounds(730, 10, 40, 30);
 
         jLabel_paystaionPaymentBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/small_gree.png"))); // NOI18N
         jLabel_paystaionPaymentBack1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1683,14 +1812,14 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         paystationPassiveCardNormal.add(jLabel_paystaionPaymentBack1);
-        jLabel_paystaionPaymentBack1.setBounds(550, 10, 30, 30);
+        jLabel_paystaionPaymentBack1.setBounds(680, 10, 30, 30);
 
         Page_Title53.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title53.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title53.setForeground(java.awt.Color.white);
         Page_Title53.setText("Select Your Souse And Destination to predict Price");
         paystationPassiveCardNormal.add(Page_Title53);
-        Page_Title53.setBounds(20, 70, 540, 30);
+        Page_Title53.setBounds(100, 70, 540, 30);
 
         jLabel66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel66.setText("Add");
@@ -1720,14 +1849,13 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title44.setBounds(20, 0, 260, 60);
 
         jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel47.setText("Add");
         jLabel47.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel47MouseClicked(evt);
             }
         });
         paystationPassiveCardNormal.add(jLabel47);
-        jLabel47.setBounds(0, 0, 630, 60);
+        jLabel47.setBounds(0, 0, 810, 60);
 
         Page_Title45.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title45.setFont(new java.awt.Font("Ubuntu Light", 0, 20)); // NOI18N
@@ -1736,13 +1864,9 @@ public class PayStationUi extends javax.swing.JFrame {
         paystationPassiveCardNormal.add(Page_Title45);
         Page_Title45.setBounds(60, 110, 120, 30);
 
-        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
-        paystationPassiveCardNormal.add(jLabel48);
-        jLabel48.setBounds(-10, -700, 695, 1220);
-
-        jLabel_payStationBack1.setText("Back");
+        jLabel_payStationBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         paystationPassiveCardNormal.add(jLabel_payStationBack1);
-        jLabel_payStationBack1.setBounds(50, 300, 80, 40);
+        jLabel_payStationBack1.setBounds(-320, -20, 1140, 1230);
 
         jLabel67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel67.setText("Add");
@@ -1758,40 +1882,39 @@ public class PayStationUi extends javax.swing.JFrame {
 
         passiveCardPaid.setLayout(null);
 
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
+        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/smalllogo.png"))); // NOI18N
         jLabel52.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel52MouseClicked(evt);
             }
         });
         passiveCardPaid.add(jLabel52);
-        jLabel52.setBounds(590, 10, 40, 30);
+        jLabel52.setBounds(740, 10, 40, 30);
 
         Page_Title46.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title46.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title46.setForeground(java.awt.Color.white);
         Page_Title46.setText("Payment Recived");
         passiveCardPaid.add(Page_Title46);
-        Page_Title46.setBounds(200, 160, 240, 30);
+        Page_Title46.setBounds(290, 160, 240, 30);
 
         jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel50.setText("Add");
         jLabel50.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel50MouseClicked(evt);
             }
         });
         passiveCardPaid.add(jLabel50);
-        jLabel50.setBounds(0, 0, 630, 60);
+        jLabel50.setBounds(0, 0, 860, 60);
         passiveCardPaid.add(jLabel51);
-        jLabel51.setBounds(280, 130, 200, 30);
+        jLabel51.setBounds(430, 270, 200, 30);
 
         Page_Title50.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title50.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title50.setForeground(java.awt.Color.white);
         Page_Title50.setText("Thank You");
         passiveCardPaid.add(Page_Title50);
-        Page_Title50.setBounds(240, 120, 130, 30);
+        Page_Title50.setBounds(170, 160, 130, 30);
 
         Page_Title51.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title51.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -1805,11 +1928,11 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title52.setForeground(java.awt.Color.white);
         Page_Title52.setText("Don't Forget to Collect your ticket");
         passiveCardPaid.add(Page_Title52);
-        Page_Title52.setBounds(130, 200, 370, 30);
+        Page_Title52.setBounds(270, 200, 370, 30);
 
-        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/AMf9X7E.jpg"))); // NOI18N
         passiveCardPaid.add(jLabel53);
-        jLabel53.setBounds(-10, -700, 695, 1200);
+        jLabel53.setBounds(-240, -20, 1020, 1200);
         passiveCardPaid.add(jLabel54);
         jLabel54.setBounds(280, 130, 200, 30);
 
@@ -1900,7 +2023,7 @@ public class PayStationUi extends javax.swing.JFrame {
         atm_outer.add(passivePackages, "card2");
 
         getContentPane().add(atm_outer);
-        atm_outer.setBounds(0, 0, 730, 400);
+        atm_outer.setBounds(0, 0, 820, 530);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2633,6 +2756,18 @@ public class PayStationUi extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel68MouseClicked
 
+    private void jLabel74MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel74MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel74MouseClicked
+
+    private void jLabel77MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel77MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel77MouseClicked
+
+    private void jLabel78MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel78MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel78MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2715,12 +2850,15 @@ public class PayStationUi extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title38;
     private javax.swing.JLabel Page_Title39;
     private javax.swing.JLabel Page_Title40;
+    private javax.swing.JLabel Page_Title41;
+    private javax.swing.JLabel Page_Title42;
     private javax.swing.JLabel Page_Title43;
     private javax.swing.JLabel Page_Title44;
     private javax.swing.JLabel Page_Title45;
     private javax.swing.JLabel Page_Title46;
     private javax.swing.JLabel Page_Title47;
     private javax.swing.JLabel Page_Title48;
+    private javax.swing.JLabel Page_Title49;
     private javax.swing.JLabel Page_Title5;
     private javax.swing.JLabel Page_Title50;
     private javax.swing.JLabel Page_Title51;
@@ -2744,6 +2882,7 @@ public class PayStationUi extends javax.swing.JFrame {
     private javax.swing.JPanel cash_pay;
     private javax.swing.JPanel enterCardId;
     private javax.swing.JPanel enterCardPin;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2786,7 +2925,6 @@ public class PayStationUi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
@@ -2809,8 +2947,24 @@ public class PayStationUi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_payStationBack;
     private javax.swing.JLabel jLabel_payStationBack1;
@@ -2865,6 +3019,7 @@ public class PayStationUi extends javax.swing.JFrame {
     private javax.swing.JLabel paystaionCardId2;
     private javax.swing.JLabel paystaionCardId3;
     private javax.swing.JLabel paystaionCardId4;
+    private javax.swing.JLabel paystaionCardId5;
     private javax.swing.JLabel paystaionCardIdEnter;
     private javax.swing.JLabel paystaionCardIdEnterText;
     private javax.swing.JLabel paystaionCardIdEnterText1;
