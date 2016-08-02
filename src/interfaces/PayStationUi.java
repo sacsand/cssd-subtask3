@@ -1451,7 +1451,7 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title64.setForeground(java.awt.Color.white);
         Page_Title64.setText("Please Choose your card ");
         card_selet.add(Page_Title64);
-        Page_Title64.setBounds(30, 100, 330, 30);
+        Page_Title64.setBounds(40, 100, 330, 30);
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel21.setText("Add");
