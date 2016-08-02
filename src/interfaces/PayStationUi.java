@@ -1372,43 +1372,43 @@ public class PayStationUi extends javax.swing.JFrame {
 
         blue21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/blue1.png"))); // NOI18N
         card_selet.add(blue21);
-        blue21.setBounds(360, 10, 60, 25);
+        blue21.setBounds(240, 530, 60, 25);
 
         blue22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/blue2.png"))); // NOI18N
         card_selet.add(blue22);
-        blue22.setBounds(420, 10, 60, 25);
+        blue22.setBounds(300, 530, 60, 25);
 
         blue23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/blue3.png"))); // NOI18N
         card_selet.add(blue23);
-        blue23.setBounds(470, 10, 60, 25);
+        blue23.setBounds(350, 530, 60, 25);
 
         blue24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/blue4.png"))); // NOI18N
         card_selet.add(blue24);
-        blue24.setBounds(530, 10, 60, 25);
+        blue24.setBounds(410, 530, 60, 25);
 
         gray21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/gray1.png"))); // NOI18N
         card_selet.add(gray21);
-        gray21.setBounds(360, 10, 60, 25);
+        gray21.setBounds(240, 530, 60, 25);
 
         gray22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/gray2.png"))); // NOI18N
         card_selet.add(gray22);
-        gray22.setBounds(420, 10, 60, 25);
+        gray22.setBounds(300, 530, 60, 25);
 
         gray23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/gray3.png"))); // NOI18N
         card_selet.add(gray23);
-        gray23.setBounds(470, 10, 60, 25);
+        gray23.setBounds(350, 530, 60, 25);
 
         gray24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/gray4.png"))); // NOI18N
         card_selet.add(gray24);
-        gray24.setBounds(530, 10, 60, 25);
+        gray24.setBounds(410, 530, 60, 25);
 
         gray25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/gray5.png"))); // NOI18N
         card_selet.add(gray25);
-        gray25.setBounds(590, 10, 60, 25);
+        gray25.setBounds(470, 530, 60, 25);
 
         blue25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/gray5.png"))); // NOI18N
         card_selet.add(blue25);
-        blue25.setBounds(590, 10, 60, 25);
+        blue25.setBounds(470, 530, 60, 25);
 
         Page_Title12.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
@@ -1434,7 +1434,7 @@ public class PayStationUi extends javax.swing.JFrame {
         Page_Title13.setForeground(java.awt.Color.white);
         Page_Title13.setText("Lydia");
         card_selet.add(Page_Title13);
-        Page_Title13.setBounds(20, 0, 360, 60);
+        Page_Title13.setBounds(20, 0, 250, 60);
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
         jLabel24.setText("Add");
@@ -1444,7 +1444,7 @@ public class PayStationUi extends javax.swing.JFrame {
             }
         });
         card_selet.add(jLabel24);
-        jLabel24.setBounds(0, 0, 780, 80);
+        jLabel24.setBounds(0, 0, 800, 80);
 
         Page_Title64.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title64.setFont(new java.awt.Font("Ubuntu Light", 0, 27)); // NOI18N
