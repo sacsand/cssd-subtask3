@@ -22,8 +22,8 @@ public class TempAccount extends Account implements Serializable{
         this.area=area;
         this.cardId=cardId;
     }
-    public TempAccount(Date createdDate, Date expireDate) {
-        super(createdDate, expireDate);
+    public TempAccount(Date createdDate, Date expireDate,String packageType) {
+        super(createdDate, expireDate,packageType);
     }
 
     public String getArea() {

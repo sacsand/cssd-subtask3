@@ -42,7 +42,7 @@ public class SmartAccount extends Account implements Serializable{
 
     }
 
-    public void deductAmount(float amount) {
+    public void deductAmount(Double amount) {
         super.setAmount(super.getAmount() - amount);
 
     }

@@ -12,24 +12,36 @@ import java.util.Date;
  *
  * @author Ravi
  */
-public class MobileAccount extends Account implements Serializable{
+public class MobileAccount extends Account implements Serializable {
+
     private int payPalAccount;
     private int creditCardNumber;
     private int debitCardNumber;
     private int subscriberId;
+    private String name;
 
-    public MobileAccount(int subscriberId,Date createdDate) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public MobileAccount(int subscriberId, Date createdDate, String name) {
         super(createdDate);
         this.subscriberId = subscriberId;
+        this.name = name;
     }
-    public MobileAccount(String accountNumber, float amount, Date createdDate, Date expireDate, String packageType,int payPalAccount, int creditCardNumber,int debitCardNumber,int subscriberId) {
+
+    public MobileAccount(String accountNumber, double amount, Date createdDate, Date expireDate, String packageType, int payPalAccount, int creditCardNumber, int debitCardNumber, int subscriberId) {
         super(accountNumber, amount, createdDate, expireDate, packageType);
-        
-        this.payPalAccount=payPalAccount;
-        this.creditCardNumber=creditCardNumber;
-        this.debitCardNumber=debitCardNumber;
-        this.subscriberId=subscriberId;
-        
+
+        this.payPalAccount = payPalAccount;
+        this.creditCardNumber = creditCardNumber;
+        this.debitCardNumber = debitCardNumber;
+        this.subscriberId = subscriberId;
+
     }
 
     public int getPayPalAccount() {
@@ -63,21 +75,20 @@ public class MobileAccount extends Account implements Serializable{
     public void setSubscriberId(int subscriberId) {
         this.subscriberId = subscriberId;
     }
-    
-   public void topUp(float amount) {
+
+    public void topUp(Double amount) {
         super.setAmount(super.getAmount() + amount);
 
     }
 
-    public void addAmount(float amount) {
+    public void addAmount(Double amount) {
         super.setAmount(amount);
 
     }
 
-    public void deductAmount(float amount) {
+    public void deductAmount(Double amount) {
         super.setAmount(super.getAmount() - amount);
 
     }
-    
-    
+
 }

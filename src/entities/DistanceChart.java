@@ -107,6 +107,10 @@ public class DistanceChart {
     }
 
  
+    //cheetah
+    public String[] getAllLocations(){
+        return locations;
+    }
     
     
 }

@@ -14,7 +14,7 @@ import java.sql.Time;
  */
 public class Log implements Serializable{
 
-    public Log(String timecreated, String route, String accountNumber, String checkInLocation, String checkInTime, String checkOutLocation, String checkOutTime, float fareCharged) {
+    public Log(String timecreated, String route, String accountNumber, String checkInLocation, String checkInTime, String checkOutLocation, String checkOutTime, Double fareCharged) {
         this.timecreated = timecreated;
         this.route = route;
         this.accountNumber = accountNumber;
@@ -39,7 +39,7 @@ public class Log implements Serializable{
     private String checkInTime;
     private String checkOutLocation;
     private String checkOutTime;
-    private float fareCharged;
+    private Double fareCharged;
 
     public String getTimecreated() {
         return timecreated;
@@ -69,7 +69,7 @@ public class Log implements Serializable{
         return checkOutTime;
     }
 
-    public float getFareCharged() {
+    public Double getFareCharged() {
         return fareCharged;
     }
 
@@ -101,7 +101,7 @@ public class Log implements Serializable{
         this.checkOutTime = checkOutTime;
     }
 
-    public void setFareCharged(float fareCharged) {
+    public void setFareCharged(Double fareCharged) {
         this.fareCharged = fareCharged;
     }
     

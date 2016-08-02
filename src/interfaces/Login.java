@@ -6,12 +6,15 @@
 package interfaces;
 
 import controllers.AccountControl;
+import controllers.PackageControl;
 import entities.MobileAccount;
+import entities.Packages;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -24,6 +27,8 @@ public class Login extends javax.swing.JFrame {
 
     private MobileAccount tempMobileAccount;
     private String accountNumber;
+    Vector<Packages> p = null;
+    private static PackageControl thePackages = PackageControl.getInstance();
 
     /**
      * Creates new form Login
@@ -31,9 +36,31 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
 
+        try {
+            thePackages.deserialize();
+        } catch (Exception e) {
+        }
+
+        p = thePackages.getAllPackages();
+
+        jLabel15.setText(p.get(0).getPackageName());
+        jLabel20.setText(p.get(1).getPackageName());
+        jLabel23.setText(p.get(2).getPackageName());
+        jLabel26.setText(p.get(3).getPackageName());
+
+        jLabel18OffpeakAmount.setText(String.valueOf(p.get(0).getOffPeakCharge()));
+        jLabel18OffpeakAmount1.setText(String.valueOf(p.get(1).getOffPeakCharge()));
+        jLabel18OffpeakAmount2.setText(String.valueOf(p.get(2).getOffPeakCharge()));
+        jLabel18OffpeakAmount3.setText(String.valueOf(p.get(3).getOffPeakCharge()));
+
+        jLabel19PeakAmount.setText(String.valueOf(p.get(0).getPeakCharge()));
+        jLabel19PeakAmount1.setText(String.valueOf(p.get(1).getPeakCharge()));
+        jLabel19PeakAmount2.setText(String.valueOf(p.get(2).getPeakCharge()));
+        jLabel19PeakAmount3.setText(String.valueOf(p.get(3).getPeakCharge()));
+
     }
 
-    public void addMobileNumber(int mobileNumber) throws ParseException, IOException {
+    public void addMobileNumber(int mobileNumber, String name) throws ParseException, IOException {
         //getting the currennt date
         DateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
         String dateString = formatter.format(new Date());
@@ -44,7 +71,7 @@ public class Login extends javax.swing.JFrame {
 
             if (AccountControl.findMobileAccountByMobileNumber(mobileNumber) == null) { //if there is no Mobile account for the given mobile number
 
-                MobileAccount acc = new MobileAccount(mobileNumber, startDate);//create new mobile account object
+                MobileAccount acc = new MobileAccount(mobileNumber, startDate, name);//create new mobile account object
                 AccountControl.createMobileAccount(acc);//add the new Mobile account to Account vector
                 accountNumber = acc.getAccountNumber();//get latest account number
                 System.out.println(" new global account number" + accountNumber);
@@ -52,7 +79,7 @@ public class Login extends javax.swing.JFrame {
                 AccountControl.serialize();//serialize the account control class
 
                 //disableing next button in ipackage panel
-                jLabel_packageNext.setVisible(false);
+                //jLabel_packageNext.setVisible(false);
 
                 // removing pane
                 main_panel.removeAll();
@@ -69,13 +96,13 @@ public class Login extends javax.swing.JFrame {
             }
 
         } catch (IOException ex) { //if there are registered users
-            MobileAccount acc = new MobileAccount(mobileNumber, startDate);//create new mobile account object
+            MobileAccount acc = new MobileAccount(mobileNumber, startDate, name);//create new mobile account object
             AccountControl.createMobileAccount(acc);//add the new Mobile account to Account vector
             accountNumber = acc.getAccountNumber();//get latest account number 
             MobileUI.mobibleAccNo = accountNumber;//set mobile ui home account number
 
             AccountControl.serialize();//serialize mobile accounts
-            jLabel_packageNext.setVisible(false); //disableing next button in ipackage panel
+            //jLabel_packageNext.setVisible(false); //disableing next button in ipackage panel
 
             // removing pane
             main_panel.removeAll();
@@ -121,7 +148,7 @@ public class Login extends javax.swing.JFrame {
         Page_Title13 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextField_mobileNumber = new javax.swing.JTextField();
-        jTextField_mobileNumber1 = new javax.swing.JTextField();
+        jTextField_userName = new javax.swing.JTextField();
         Page_Title14 = new javax.swing.JLabel();
         Page_Title38 = new javax.swing.JLabel();
         Page_Title15 = new javax.swing.JLabel();
@@ -145,17 +172,14 @@ public class Login extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         ipaid = new javax.swing.JPanel();
         Page_Title36 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         Page_Title37 = new javax.swing.JLabel();
         jLabel3_mobileAccBalance = new javax.swing.JLabel();
         Page_Title40 = new javax.swing.JLabel();
         Page_Title41 = new javax.swing.JLabel();
         Page_Title42 = new javax.swing.JLabel();
-        Visa1 = new javax.swing.JLabel();
         Page_Title43 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         bacground_login4 = new javax.swing.JLabel();
         ipay = new javax.swing.JPanel();
         jTextField_mobileAccTopUpPin = new javax.swing.JTextField();
@@ -171,7 +195,6 @@ public class Login extends javax.swing.JFrame {
         white_transparent_panel_title7 = new javax.swing.JLabel();
         Page_Title33 = new javax.swing.JLabel();
         Page_Title34 = new javax.swing.JLabel();
-        jTextField_topUpAmount = new javax.swing.JTextField();
         Page_Title35 = new javax.swing.JLabel();
         jTextField_mobileAccTopUpCardNo = new javax.swing.JTextField();
         bacground_login3 = new javax.swing.JLabel();
@@ -179,10 +202,32 @@ public class Login extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         ipackage = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel19PeakAmount = new javax.swing.JLabel();
+        jLabel18OffpeakAmount = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel18OffpeakAmount1 = new javax.swing.JLabel();
+        jLabel19PeakAmount1 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel18OffpeakAmount2 = new javax.swing.JLabel();
+        jLabel19PeakAmount2 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel18OffpeakAmount3 = new javax.swing.JLabel();
+        jLabel19PeakAmount3 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         Page_Title39 = new javax.swing.JLabel();
+        jLabel_paystationNightPack4 = new javax.swing.JLabel();
+        jLabel_paystationNightPack3 = new javax.swing.JLabel();
+        jLabel_paystationNightPack2 = new javax.swing.JLabel();
+        jLabel_paystationNightPack1 = new javax.swing.JLabel();
         Page_Title44 = new javax.swing.JLabel();
-        jComboBox_packageType = new javax.swing.JComboBox();
-        jLabel_packageNext = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         bacground_login5 = new javax.swing.JLabel();
 
@@ -222,7 +267,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jTextField_loginMobileNumber);
-        jTextField_loginMobileNumber.setBounds(160, 270, 170, 23);
+        jTextField_loginMobileNumber.setBounds(160, 270, 170, 27);
 
         Page_Title12.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title12.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
@@ -343,9 +388,9 @@ public class Login extends javax.swing.JFrame {
         iregister.add(jLabel2);
         jLabel2.setBounds(130, 390, 210, 40);
         iregister.add(jTextField_mobileNumber);
-        jTextField_mobileNumber.setBounds(140, 250, 180, 23);
-        iregister.add(jTextField_mobileNumber1);
-        jTextField_mobileNumber1.setBounds(140, 320, 180, 23);
+        jTextField_mobileNumber.setBounds(140, 250, 190, 27);
+        iregister.add(jTextField_userName);
+        jTextField_userName.setBounds(140, 320, 190, 27);
 
         Page_Title14.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title14.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
@@ -515,13 +560,9 @@ public class Login extends javax.swing.JFrame {
         ipaid.add(Page_Title36);
         Page_Title36.setBounds(250, 50, 260, 21);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-TOPall.png"))); // NOI18N
-        ipaid.add(jLabel10);
-        jLabel10.setBounds(140, 340, 30, 40);
-
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-SHomrmall.png"))); // NOI18N
         ipaid.add(jLabel11);
-        jLabel11.setBounds(140, 390, 29, 40);
+        jLabel11.setBounds(140, 320, 29, 40);
 
         Page_Title37.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title37.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -535,7 +576,7 @@ public class Login extends javax.swing.JFrame {
         jLabel3_mobileAccBalance.setForeground(java.awt.Color.white);
         jLabel3_mobileAccBalance.setText("$100");
         ipaid.add(jLabel3_mobileAccBalance);
-        jLabel3_mobileAccBalance.setBounds(210, 250, 60, 20);
+        jLabel3_mobileAccBalance.setBounds(210, 250, 170, 20);
 
         Page_Title40.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title40.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
@@ -561,19 +602,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         ipaid.add(Page_Title42);
-        Page_Title42.setBounds(130, 390, 230, 40);
-
-        Visa1.setBackground(new java.awt.Color(102, 102, 102));
-        Visa1.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
-        Visa1.setForeground(java.awt.Color.white);
-        Visa1.setText("                    Top-UP");
-        Visa1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Visa1MouseClicked(evt);
-            }
-        });
-        ipaid.add(Visa1);
-        Visa1.setBounds(130, 341, 230, 40);
+        Page_Title42.setBounds(130, 320, 230, 40);
 
         Page_Title43.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title43.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
@@ -590,17 +619,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         ipaid.add(jLabel4);
-        jLabel4.setBounds(130, 390, 230, 40);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
-        jLabel5.setText("Add");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
-        ipaid.add(jLabel5);
-        jLabel5.setBounds(130, 340, 230, 40);
+        jLabel4.setBounds(130, 320, 230, 40);
 
         bacground_login4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
         ipaid.add(bacground_login4);
@@ -610,7 +629,7 @@ public class Login extends javax.swing.JFrame {
 
         ipay.setLayout(null);
         ipay.add(jTextField_mobileAccTopUpPin);
-        jTextField_mobileAccTopUpPin.setBounds(170, 300, 150, 23);
+        jTextField_mobileAccTopUpPin.setBounds(160, 340, 160, 27);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/Icon-TOPall.png"))); // NOI18N
         ipay.add(jLabel13);
@@ -619,14 +638,14 @@ public class Login extends javax.swing.JFrame {
         Page_Title19.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title19.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title19.setForeground(java.awt.Color.white);
-        Page_Title19.setText("               top up");
+        Page_Title19.setText("pay");
         Page_Title19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Page_Title19MouseClicked(evt);
             }
         });
         ipay.add(Page_Title19);
-        Page_Title19.setBounds(160, 400, 180, 40);
+        Page_Title19.setBounds(230, 400, 40, 40);
 
         Page_Title21.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title21.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
@@ -643,7 +662,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         ipay.add(jLabel3);
-        jLabel3.setBounds(150, 400, 190, 40);
+        jLabel3.setBounds(150, 400, 180, 40);
 
         Page_Title47.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title47.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
@@ -655,9 +674,9 @@ public class Login extends javax.swing.JFrame {
         Page_Title28.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title28.setFont(new java.awt.Font("Ubuntu Light", 0, 24)); // NOI18N
         Page_Title28.setForeground(java.awt.Color.white);
-        Page_Title28.setText("Top Up");
+        Page_Title28.setText("100");
         ipay.add(Page_Title28);
-        Page_Title28.setBounds(200, 140, 260, 30);
+        Page_Title28.setBounds(210, 180, 70, 30);
 
         Page_Title30.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title30.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -678,7 +697,7 @@ public class Login extends javax.swing.JFrame {
         Page_Title32.setForeground(java.awt.Color.white);
         Page_Title32.setText("         PIN");
         ipay.add(Page_Title32);
-        Page_Title32.setBounds(190, 270, 110, 21);
+        Page_Title32.setBounds(180, 310, 110, 21);
 
         white_transparent_panel_title7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/back02.png"))); // NOI18N
         white_transparent_panel_title7.setText("larasparet");
@@ -705,24 +724,16 @@ public class Login extends javax.swing.JFrame {
         Page_Title34.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title34.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title34.setForeground(java.awt.Color.white);
-        Page_Title34.setText("Enter Amount");
+        Page_Title34.setText("Total Amount");
         ipay.add(Page_Title34);
-        Page_Title34.setBounds(190, 330, 130, 21);
-
-        jTextField_topUpAmount.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_topUpAmountActionPerformed(evt);
-            }
-        });
-        ipay.add(jTextField_topUpAmount);
-        jTextField_topUpAmount.setBounds(170, 360, 150, 23);
+        Page_Title34.setBounds(180, 140, 130, 21);
 
         Page_Title35.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title35.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         Page_Title35.setForeground(java.awt.Color.white);
         Page_Title35.setText("Enter your Card No");
         ipay.add(Page_Title35);
-        Page_Title35.setBounds(170, 210, 200, 20);
+        Page_Title35.setBounds(160, 250, 200, 20);
 
         jTextField_mobileAccTopUpCardNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -730,7 +741,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         ipay.add(jTextField_mobileAccTopUpCardNo);
-        jTextField_mobileAccTopUpCardNo.setBounds(170, 240, 150, 23);
+        jTextField_mobileAccTopUpCardNo.setBounds(160, 280, 160, 27);
 
         bacground_login3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
         ipay.add(bacground_login3);
@@ -767,11 +778,131 @@ public class Login extends javax.swing.JFrame {
 
         ipackage.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel15.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
+        jLabel15.setForeground(java.awt.Color.white);
+        jLabel15.setText("ABC");
+        ipackage.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 50, 30));
+
+        jLabel19PeakAmount.setForeground(java.awt.Color.white);
+        jLabel19PeakAmount.setText("0");
+        ipackage.add(jLabel19PeakAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 40, 20));
+
+        jLabel18OffpeakAmount.setForeground(java.awt.Color.white);
+        jLabel18OffpeakAmount.setText("0");
+        ipackage.add(jLabel18OffpeakAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 40, 20));
+
+        jLabel18.setForeground(java.awt.Color.white);
+        jLabel18.setText("Peak");
+        ipackage.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 60, 20));
+
+        jLabel19.setForeground(java.awt.Color.white);
+        jLabel19.setText("Off Peak");
+        ipackage.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 60, 20));
+
+        jLabel20.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
+        jLabel20.setForeground(java.awt.Color.white);
+        jLabel20.setText("ABC");
+        ipackage.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 50, 30));
+
+        jLabel18OffpeakAmount1.setForeground(java.awt.Color.white);
+        jLabel18OffpeakAmount1.setText("0");
+        ipackage.add(jLabel18OffpeakAmount1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 40, 20));
+
+        jLabel19PeakAmount1.setForeground(java.awt.Color.white);
+        jLabel19PeakAmount1.setText("0");
+        ipackage.add(jLabel19PeakAmount1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 40, 20));
+
+        jLabel21.setForeground(java.awt.Color.white);
+        jLabel21.setText("Peak");
+        ipackage.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 60, 20));
+
+        jLabel22.setForeground(java.awt.Color.white);
+        jLabel22.setText("Off Peak");
+        ipackage.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 60, 20));
+
+        jLabel23.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
+        jLabel23.setForeground(java.awt.Color.white);
+        jLabel23.setText("ABC");
+        ipackage.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 40, 30));
+
+        jLabel18OffpeakAmount2.setForeground(java.awt.Color.white);
+        jLabel18OffpeakAmount2.setText("0");
+        ipackage.add(jLabel18OffpeakAmount2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 40, 20));
+
+        jLabel19PeakAmount2.setForeground(java.awt.Color.white);
+        jLabel19PeakAmount2.setText("0");
+        ipackage.add(jLabel19PeakAmount2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 40, 20));
+
+        jLabel24.setForeground(java.awt.Color.white);
+        jLabel24.setText("Peak");
+        ipackage.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 60, 20));
+
+        jLabel25.setForeground(java.awt.Color.white);
+        jLabel25.setText("Offpeak");
+        ipackage.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 60, 20));
+
+        jLabel26.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
+        jLabel26.setForeground(java.awt.Color.white);
+        jLabel26.setText("ABC");
+        ipackage.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 50, 30));
+
+        jLabel18OffpeakAmount3.setForeground(java.awt.Color.white);
+        jLabel18OffpeakAmount3.setText("0");
+        ipackage.add(jLabel18OffpeakAmount3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 40, 20));
+
+        jLabel19PeakAmount3.setForeground(java.awt.Color.white);
+        jLabel19PeakAmount3.setText("0");
+        ipackage.add(jLabel19PeakAmount3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 400, 40, 20));
+
+        jLabel17.setForeground(java.awt.Color.white);
+        jLabel17.setText("Peak");
+        ipackage.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 60, 20));
+
+        jLabel16.setForeground(java.awt.Color.white);
+        jLabel16.setText("Off Peak");
+        ipackage.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 60, 20));
+
         Page_Title39.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title39.setFont(new java.awt.Font("Ubuntu Light", 0, 14)); // NOI18N
         Page_Title39.setForeground(java.awt.Color.white);
         Page_Title39.setText("beta 2");
         ipackage.add(Page_Title39, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, -1, -1));
+
+        jLabel_paystationNightPack4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel_paystationNightPack4.setText("Add");
+        jLabel_paystationNightPack4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_paystationNightPack4MouseClicked(evt);
+            }
+        });
+        ipackage.add(jLabel_paystationNightPack4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 290, 70));
+
+        jLabel_paystationNightPack3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel_paystationNightPack3.setText("Add");
+        jLabel_paystationNightPack3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_paystationNightPack3MouseClicked(evt);
+            }
+        });
+        ipackage.add(jLabel_paystationNightPack3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 290, 70));
+
+        jLabel_paystationNightPack2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel_paystationNightPack2.setText("Add");
+        jLabel_paystationNightPack2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_paystationNightPack2MouseClicked(evt);
+            }
+        });
+        ipackage.add(jLabel_paystationNightPack2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 290, 70));
+
+        jLabel_paystationNightPack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/buttonBlue1.png"))); // NOI18N
+        jLabel_paystationNightPack1.setText("Add");
+        jLabel_paystationNightPack1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_paystationNightPack1MouseClicked(evt);
+            }
+        });
+        ipackage.add(jLabel_paystationNightPack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 290, 70));
 
         Page_Title44.setBackground(new java.awt.Color(102, 102, 102));
         Page_Title44.setFont(new java.awt.Font("Ubuntu Light", 0, 36)); // NOI18N
@@ -779,29 +910,10 @@ public class Login extends javax.swing.JFrame {
         Page_Title44.setText("Lydia");
         ipackage.add(Page_Title44, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, -1, -1));
 
-        jComboBox_packageType.setForeground(java.awt.Color.white);
-        jComboBox_packageType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Day", "Night" }));
-        jComboBox_packageType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox_packageTypeActionPerformed(evt);
-            }
-        });
-        ipackage.add(jComboBox_packageType, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 210, -1));
-
-        jLabel_packageNext.setFont(new java.awt.Font("Ubuntu Light", 1, 18)); // NOI18N
-        jLabel_packageNext.setForeground(java.awt.Color.white);
-        jLabel_packageNext.setText("Next");
-        jLabel_packageNext.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel_packageNextMouseClicked(evt);
-            }
-        });
-        ipackage.add(jLabel_packageNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 130, 50));
-
         jLabel8.setFont(new java.awt.Font("Ubuntu Light", 0, 18)); // NOI18N
         jLabel8.setForeground(java.awt.Color.white);
-        jLabel8.setText("choose the package");
-        ipackage.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 180, -1));
+        jLabel8.setText("choose a package");
+        ipackage.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 180, -1));
 
         bacground_login5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourses/2013-06-13-13.13.33.png"))); // NOI18N
         ipackage.add(bacground_login5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, -410, 700, -1));
@@ -854,7 +966,7 @@ public class Login extends javax.swing.JFrame {
         if (!jTextField_mobileNumber.getText().isEmpty()) {//checks if the text field is empty
 
             try {
-                addMobileNumber(Integer.parseInt(jTextField_mobileNumber.getText())); //add a new mobile account
+                addMobileNumber(Integer.parseInt(jTextField_mobileNumber.getText()), jTextField_userName.getText()); //add a new mobile account
 
             } catch (ParseException ex) {
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -910,17 +1022,15 @@ public class Login extends javax.swing.JFrame {
         new MobileUI().setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel5MouseClicked
-
     private void Page_Title19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Page_Title19MouseClicked
         //All top up fieds should be filled
-        if ((!jTextField_topUpAmount.getText().isEmpty()) && (!jTextField_mobileAccTopUpCardNo.getText().isEmpty()) && (!jTextField_mobileAccTopUpPin.getText().isEmpty())) {
+        if ((!jTextField_mobileAccTopUpCardNo.getText().isEmpty()) && (!jTextField_mobileAccTopUpPin.getText().isEmpty())) {
 
             try {
 
-                MobileUI.topUpAccount(Double.parseDouble(jTextField_topUpAmount.getText())); //calling the topup method from MobileUI
+                Double amount = thePackages.findPackageByPackageID(tempMobileAccount.getPackageType()).getAmountNeeded();
+                MobileUI.topUpAccount(amount); //calling the topup method from MobileUI
+                jLabel3_mobileAccBalance.setText(String.valueOf(tempMobileAccount.getAmount()));//setting mobile balance
                 // removing pane
                 main_panel.removeAll();
                 main_panel.repaint();
@@ -930,7 +1040,7 @@ public class Login extends javax.swing.JFrame {
                 main_panel.repaint();
                 main_panel.revalidate();
 
-                jLabel3_mobileAccBalance.setText(String.valueOf(tempMobileAccount.getAmount()));//setting mobile balance jlable in top-up sucess panel
+                
 
             } catch (NumberFormatException e) { //top up amonut should be a number
                 JOptionPane.showMessageDialog(null, "please enter a valid amount", "Message", JOptionPane.INFORMATION_MESSAGE);
@@ -956,33 +1066,6 @@ public class Login extends javax.swing.JFrame {
         new MobileUI().setVisible(true);
     }//GEN-LAST:event_Page_Title42MouseClicked
 
-    private void Visa1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Visa1MouseClicked
-        // removing pane
-        main_panel.removeAll();
-        main_panel.repaint();
-        main_panel.revalidate();
-        //adding pane
-        main_panel.add(ipayment_type);
-        main_panel.repaint();
-        main_panel.revalidate();
-    }//GEN-LAST:event_Visa1MouseClicked
-
-    private void jLabel_packageNextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_packageNextMouseClicked
-
-        tempMobileAccount = AccountControl.getInstance().findMobileAccountByAccountNumber(accountNumber); //setting the current user object
-        tempMobileAccount.setPackageType((String) jComboBox_packageType.getSelectedItem()); //set the selected package to the user
-        // removing pane
-        main_panel.removeAll();
-        main_panel.repaint();
-        main_panel.revalidate();
-        //adding pane
-        main_panel.add(ipayment_type);
-        main_panel.repaint();
-        main_panel.revalidate();
-
-
-    }//GEN-LAST:event_jLabel_packageNextMouseClicked
-
     private void VisaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VisaMouseClicked
         // TODO add your handling code here:
 
@@ -995,11 +1078,6 @@ public class Login extends javax.swing.JFrame {
         main_panel.repaint();
         main_panel.revalidate();
     }//GEN-LAST:event_VisaMouseClicked
-
-    private void jComboBox_packageTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_packageTypeActionPerformed
-        // TODO add your handling code here:
-        jLabel_packageNext.setVisible(true);
-    }//GEN-LAST:event_jComboBox_packageTypeActionPerformed
 
     private void jLabel_mobileSignInMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_mobileSignInMouseEntered
         // TODO add your handling code here:
@@ -1032,10 +1110,6 @@ public class Login extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jLabel_mobileSignInMouseClicked
 
-    private void jTextField_topUpAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_topUpAmountActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_topUpAmountActionPerformed
-
     private void Page_Title18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Page_Title18MouseClicked
         try {
 
@@ -1055,6 +1129,71 @@ public class Login extends javax.swing.JFrame {
     private void jTextField_loginMobileNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_loginMobileNumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_loginMobileNumberActionPerformed
+
+    private void jLabel_paystationNightPack1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_paystationNightPack1MouseClicked
+
+        tempMobileAccount = AccountControl.getInstance().findMobileAccountByAccountNumber(accountNumber); //setting the current user object
+        tempMobileAccount.setPackageType((p.get(0).getPackageId())); //set the selected package to the user
+        
+        Page_Title28.setText(String.valueOf(p.get(0).getAmountNeeded()));
+        // removing pane
+        main_panel.removeAll();
+        main_panel.repaint();
+        main_panel.revalidate();
+        //adding pane
+        main_panel.add(ipayment_type);
+        main_panel.repaint();
+        main_panel.revalidate();
+
+
+    }//GEN-LAST:event_jLabel_paystationNightPack1MouseClicked
+
+    private void jLabel_paystationNightPack2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_paystationNightPack2MouseClicked
+        // TODO add your handling code here:
+        
+         tempMobileAccount = AccountControl.getInstance().findMobileAccountByAccountNumber(accountNumber); //setting the current user object
+        tempMobileAccount.setPackageType((p.get(1).getPackageId())); //set the selected package to the user
+        Page_Title28.setText(String.valueOf(p.get(1).getAmountNeeded()));
+        // removing pane
+        main_panel.removeAll();
+        main_panel.repaint();
+        main_panel.revalidate();
+        //adding pane
+        main_panel.add(ipayment_type);
+        main_panel.repaint();
+        main_panel.revalidate();
+    }//GEN-LAST:event_jLabel_paystationNightPack2MouseClicked
+
+    private void jLabel_paystationNightPack3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_paystationNightPack3MouseClicked
+        // TODO add your handling code here:
+        
+         tempMobileAccount = AccountControl.getInstance().findMobileAccountByAccountNumber(accountNumber); //setting the current user object
+        tempMobileAccount.setPackageType((p.get(2).getPackageId())); //set the selected package to the user
+        Page_Title28.setText(String.valueOf(p.get(2).getAmountNeeded()));
+        // removing pane
+        main_panel.removeAll();
+        main_panel.repaint();
+        main_panel.revalidate();
+        //adding pane
+        main_panel.add(ipayment_type);
+        main_panel.repaint();
+        main_panel.revalidate();
+    }//GEN-LAST:event_jLabel_paystationNightPack3MouseClicked
+
+    private void jLabel_paystationNightPack4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_paystationNightPack4MouseClicked
+        // TODO add your handling code here:
+         tempMobileAccount = AccountControl.getInstance().findMobileAccountByAccountNumber(accountNumber); //setting the current user object
+        tempMobileAccount.setPackageType((p.get(3).getPackageId())); //set the selected package to the user
+        Page_Title28.setText(String.valueOf(p.get(3).getAmountNeeded()));
+        // removing pane
+        main_panel.removeAll();
+        main_panel.repaint();
+        main_panel.revalidate();
+        //adding pane
+        main_panel.add(ipayment_type);
+        main_panel.repaint();
+        main_panel.revalidate();
+    }//GEN-LAST:event_jLabel_paystationNightPack4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1081,6 +1220,230 @@ public class Login extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1167,7 +1530,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Page_Title8;
     private javax.swing.JLabel Page_Title9;
     private javax.swing.JLabel Visa;
-    private javax.swing.JLabel Visa1;
     private javax.swing.JLabel bacground_login;
     private javax.swing.JLabel bacground_login1;
     private javax.swing.JLabel bacground_login2;
@@ -1179,31 +1541,50 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel ipay;
     private javax.swing.JPanel ipayment_type;
     private javax.swing.JPanel iregister;
-    private javax.swing.JComboBox jComboBox_packageType;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel18OffpeakAmount;
+    private javax.swing.JLabel jLabel18OffpeakAmount1;
+    private javax.swing.JLabel jLabel18OffpeakAmount2;
+    private javax.swing.JLabel jLabel18OffpeakAmount3;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel19PeakAmount;
+    private javax.swing.JLabel jLabel19PeakAmount1;
+    private javax.swing.JLabel jLabel19PeakAmount2;
+    private javax.swing.JLabel jLabel19PeakAmount3;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel3_mobileAccBalance;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_mobileSignIn;
-    private javax.swing.JLabel jLabel_packageNext;
+    private javax.swing.JLabel jLabel_paystationNightPack1;
+    private javax.swing.JLabel jLabel_paystationNightPack2;
+    private javax.swing.JLabel jLabel_paystationNightPack3;
+    private javax.swing.JLabel jLabel_paystationNightPack4;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField_loginMobileNumber;
     private javax.swing.JTextField jTextField_mobileAccTopUpCardNo;
     private javax.swing.JTextField jTextField_mobileAccTopUpPin;
     private javax.swing.JTextField jTextField_mobileNumber;
-    private javax.swing.JTextField jTextField_mobileNumber1;
-    public static javax.swing.JTextField jTextField_topUpAmount;
+    private javax.swing.JTextField jTextField_userName;
     private javax.swing.JPanel main_panel;
     private javax.swing.JLabel white_transparent_panel_title4;
     private javax.swing.JLabel white_transparent_panel_title5;

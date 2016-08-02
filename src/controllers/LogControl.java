@@ -62,9 +62,9 @@ public class LogControl implements Serializable{
          setOfTempLogs.remove(TPlog);
      }
      public CardReaderLog findCRLogByAccountNumber(String accountNumber){
-         for(int i=0;i<setOfCarReaderLogs.size();i++)
+         
+            for(CardReaderLog CR: setOfCarReaderLogs )
             {
-               for(CardReaderLog CR: setOfCarReaderLogs )
                 if((CR.getAccountNumber()).equals(accountNumber))
                 {
                     return CR;

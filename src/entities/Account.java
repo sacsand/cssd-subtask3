@@ -45,13 +45,13 @@ public class Account implements Serializable {
     }
     //cheetah for temp account
 
-    public Account(Date createdDate, Date expireDate,String area) {
+    public Account(Date createdDate, Date expireDate,String packageType) {
         this.createdDate = createdDate;
         this.expireDate = expireDate;
         this.accountNumber = "TA" + accountCount;
         accountCount++; //increment the accountCount
     }
-    public Account(String accountNumber, float amount, Date createdDate, Date expireDate, String packageType) {
+    public Account(String accountNumber, double amount, Date createdDate, Date expireDate, String packageType) {
         this.accountNumber = accountNumber;
         this.amount = amount;
         this.createdDate = createdDate;

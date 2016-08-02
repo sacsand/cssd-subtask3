@@ -5,6 +5,9 @@
  */
 package entities;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
@@ -12,32 +15,46 @@ import java.io.Serializable;
  * @author Ravi
  */
 public class Packages implements Serializable{
-    private float peakCharge;
-    private float offPeakCharge;
-    private float amountNeeded;
+    private String packageName;
+    private Double peakCharge;
+    private Double offPeakCharge;
+    private Double amountNeeded;
     private String packageId;
-
-    public Packages(float peakCharge, float offPeakCharge, float amountNeeded, String packageId) {
+    private static int packageCount = 0;
+    public Packages(String packageName,Double peakCharge, Double offPeakCharge, Double amountNeeded) {
+        this.packageName = packageName;
         this.peakCharge = peakCharge;
         this.offPeakCharge = offPeakCharge;
         this.amountNeeded = amountNeeded;
-        this.packageId = packageId;
+        this.packageId = "P" + packageCount;
+        packageCount++;
     }
     
+    
+    
+    public String  getPackageName() {
+        return packageName;
+    }
 
-    public float getPeakCharge() {
+    public void setPackageName(String packageName) {
+        this.packageName = packageName;
+    }
+    
+    
+    
+    public double getPeakCharge() {
         return peakCharge;
     }
 
-    public void setPeakCharge(float peakCharge) {
+    public void setPeakCharge(double peakCharge) {
         this.peakCharge = peakCharge;
     }
 
-    public void setOffPeakCharge(float offPeakCharge) {
+    public void setOffPeakCharge(double offPeakCharge) {
         this.offPeakCharge = offPeakCharge;
     }
 
-    public void setAmountNeeded(float amountNeeded) {
+    public void setAmountNeeded(double amountNeeded) {
         this.amountNeeded = amountNeeded;
     }
 
@@ -45,11 +62,11 @@ public class Packages implements Serializable{
         this.packageId = packageId;
     }
 
-    public float getOffPeakCharge() {
+    public double getOffPeakCharge() {
         return offPeakCharge;
     }
 
-    public float getAmountNeeded() {
+    public double getAmountNeeded() {
         return amountNeeded;
     }
 
@@ -57,4 +74,22 @@ public class Packages implements Serializable{
         return packageId;
     }
     
+    //added by vish
+    public static int getPackageCount() {
+        return packageCount;
+    }
+    
+    //to serialize the static variable packageCount
+      private void writeObject(ObjectOutputStream out) throws IOException 
+    {
+        out.defaultWriteObject();
+        out.writeObject(new Integer(packageCount));
+    }
+   
+    //to deserialize the static variable packageCount
+         private void readObject(ObjectInputStream in) throws ClassNotFoundException, IOException
+    {
+        in.defaultReadObject();
+        packageCount = (Integer) in.readObject();
+    }
 }

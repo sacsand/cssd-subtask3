@@ -41,7 +41,7 @@ public class PackageControl implements Serializable {
     public void deletePackage(Packages pack){
         
     }
-    
+    /*
     public Packages findPackageByPackageID(String packageID){
          for(int i=0;i<setOfPackages.size();i++)
             {
@@ -55,8 +55,19 @@ public class PackageControl implements Serializable {
                 }
             }
         return null;
-     }
-    public float getChargesByTime(Packages pack,String time){
+     }*/
+   //added by vish
+ public Packages findPackageByPackageID(String packageID){ 
+    Packages pk=null; 
+        for(Packages pack:setOfPackages){
+            if(pack.getPackageId().equalsIgnoreCase(packageID))
+            {
+                pk=pack;
+            }     
+        }
+      return pk ;
+ }
+    public double getChargesByTime(Packages pack,String time){
         
         String[] parts = time.split("(?=:)");
         int Time =Integer.parseInt(parts[0]); 
@@ -67,6 +78,12 @@ public class PackageControl implements Serializable {
         else{
             return pack.getPeakCharge();
         }
+    }
+    //added by vish 
+    public Vector<Packages> getAllPackages(){
+    
+    return setOfPackages;
+    
     }
     
     
